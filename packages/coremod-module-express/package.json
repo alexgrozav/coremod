@@ -1,6 +1,6 @@
 {
   "name": "@coremod/express",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Express module for Coremod Typescript Node.js application.",
   "main": "index.ts",
   "scripts": {
@@ -27,9 +27,9 @@
   },
   "gitHead": "eb8c319190b9e4ba27c38209a0f9fa081155d12f",
   "files": [
-      "src",
-      "index.ts",
-      "LICENSE",
-      "README.md"
+    "src",
+    "index.ts",
+    "LICENSE",
+    "README.md"
   ]
 }
