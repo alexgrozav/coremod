@@ -10,6 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "coremod": "file:../../coremod"
+    "@coremod/express": "file:../../coremod-module-express",
+    "class-transformer": "^0.3.1",
+    "coremod": "file:../../coremod",
+    "cors": "^2.8.5",
+    "serve-favicon": "^2.5.0"
   }
 }
