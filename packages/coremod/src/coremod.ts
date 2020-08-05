@@ -1,4 +1,4 @@
-import * as deepmerge from 'deepmerge';
+import deepmerge from 'deepmerge';
 import {
     CoremodConfiguration,
     CoremodModuleRuntimeContext,
@@ -6,6 +6,7 @@ import {
     CoremodModuleRuntimeConfiguration,
     CoremodModuleOptions
 } from "./types";
+import { config as dotenv } from "dotenv"
 
 export class Coremod {
     public runtimeContext: CoremodModuleRuntimeContext = {};
@@ -15,7 +16,7 @@ export class Coremod {
     constructor(public configuration: CoremodConfiguration) {}
 
     public async initialize() {
-        require('dotenv').config();
+        dotenv({ path: this.configuration.env });
 
         if (!(this.configuration.modules && this.configuration.modules.length > 0)) {
             return;

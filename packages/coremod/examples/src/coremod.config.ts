@@ -9,6 +9,10 @@ export const configuration: CoremodConfiguration = {
                 host: '3031'
             }
         }],
-        require.resolve('@coremod/express')
+        require.resolve('@coremod/express'),
+        [require.resolve('@coremod/public'), {
+            favicon: false
+        }],
+        require.resolve('@coremod/authentication')
     ]
 };

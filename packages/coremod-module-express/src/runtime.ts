@@ -35,6 +35,12 @@ export const runtime: CoremodModuleRuntime = (context: CoremodModuleRuntimeConte
         currentUserChecker: configuration.application.currentUserChecker || currentUserChecker,
     });
 
+    // Start express server
+    const server = application.listen(configuration.application.port, configuration.application.host, () => {
+        console.log(`Application running at ${configuration.application.schema}://${configuration.application.host}:${configuration.application.port}!`);
+    });
+
     // Here we can set the data for other loaders
-    configuration.application = application;
+    context.application = application;
+    context.server = server;
 };

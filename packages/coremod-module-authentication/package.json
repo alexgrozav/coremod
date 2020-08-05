@@ -1,7 +1,7 @@
 {
-  "name": "@coremod/public",
+  "name": "@coremod/authentication",
   "version": "0.0.3",
-  "description": "Express public folder for Coremod Typescript Node.js application.",
+  "description": "Express Passport authentication for Coremod Typescript Node.js application.",
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,17 +20,32 @@
   },
   "homepage": "https://github.com/coremod-io/coremod#readme",
   "peerDependencies": {
+    "bcrypt": ">=5.0.0",
     "coremod": "*",
-    "express": ">=4.0.0"
+    "class-transformer": ">=0.3.0",
+    "class-validator": ">=0.12.0",
+    "typeorm": ">=0.2.0",
+    "express": ">=4.0.0",
+    "passport": ">=0.4.0",
+    "passport-jwt": ">=4.0.0",
+    "routing-controllers": ">=0.8.0"
   },
   "devDependencies": {
+    "@types/bcrypt": "^3.0.0",
     "@types/express": "^4.17.7",
     "@types/node": "^14.0.27",
-    "@types/serve-favicon": "^2.5.0",
+    "@types/passport-jwt": "^3.0.3",
+    "bcrypt": "^5.0.0",
+    "class-transformer": "^0.3.1",
+    "class-validator": "^0.12.2",
     "coremod": "^0.0.3",
     "express": "^4.17.1",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "routing-controllers": "^0.9.0-alpha.6",
     "ts-node": "^8.10.2",
     "tslint": "^6.1.3",
+    "typeorm": "^0.2.25",
     "typescript": "^3.9.7"
   },
   "gitHead": "1eace83f0c90bb2caa971a2b7a8b3895435b31be",
@@ -39,8 +54,5 @@
     "index.ts",
     "LICENSE",
     "README.md"
-  ],
-  "dependencies": {
-    "serve-favicon": "^2.5.0"
-  }
+  ]
 }
