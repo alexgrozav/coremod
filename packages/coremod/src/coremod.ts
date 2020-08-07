@@ -57,8 +57,6 @@ export class Coremod {
 
     private async loadModule(moduleName: string) {
         return new Promise((resolve) => {
-            console.log(moduleName as string)
-            console.log(require.resolve(moduleName as string))
             import(require.resolve(moduleName as string)).then((module) => {
                 resolve(module);
             });

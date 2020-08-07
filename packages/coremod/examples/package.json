@@ -5,19 +5,23 @@
   "main": "index.ts",
   "scripts": {
     "start": "ts-node src/index.ts",
+    "coremod": "ts-node node_modules/coremod/cli.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@coremod/authentication": "file:../../coremod-module-authentication",
     "@coremod/express": "file:../../coremod-module-express",
     "@coremod/public": "file:../../coremod-module-public",
-    "@coremod/authentication": "file:../../coremod-module-authentication",
-    "coremod": "file:../../coremod"
+    "@coremod/typeorm": "file:../../coremod-module-typeorm",
+    "coremod": "file:../../coremod",
+    "typeorm": "^0.2.25"
   },
   "devDependencies": {
     "@types/node": "^14.0.27",
-    "ts-node": "^8.10.2"
+    "ts-node": "^8.10.2",
+    "tsconfig-paths": "^3.9.0"
   }
 }

@@ -48,7 +48,7 @@
     "typeorm": "^0.2.25",
     "typescript": "^3.9.7"
   },
-  "gitHead": "1eace83f0c90bb2caa971a2b7a8b3895435b31be",
+  "gitHead": "7f7b50d9f20692eea74115e5537f43f8c41eed76",
   "files": [
     "src",
     "index.ts",

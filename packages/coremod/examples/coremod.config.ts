@@ -3,7 +3,7 @@ import { CoremodConfiguration } from "coremod/src/types";
 
 export const configuration: CoremodConfiguration = {
     modules: [
-        [resolve(__dirname, 'module'), {
+        [resolve(__dirname, 'src', 'module'), {
             something: true,
             configuration: {
                 host: '3031'
@@ -13,6 +13,7 @@ export const configuration: CoremodConfiguration = {
         [require.resolve('@coremod/public'), {
             favicon: false
         }],
+        require.resolve('@coremod/typeorm'),
         require.resolve('@coremod/authentication')
     ]
 };
