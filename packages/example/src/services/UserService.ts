@@ -3,7 +3,7 @@ import { OrmRepository } from 'typeorm-typedi-extensions';
 import { v4 as uuid } from 'uuid';
 
 import { EventDispatcher, EventDispatcherInterface } from '@coremod/typeorm';
-import { DLogger, LoggerInterface } from '@app/modules/winston';
+import { DLogger, LoggerInterface } from '@coremod/logger';
 import { User } from '@app/models/User';
 import { UserRepository } from '@app/repositories/UserRepository';
 import { events } from '@app/subscribers/events';

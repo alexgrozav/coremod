@@ -14,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "@coremod/authentication": "file:../coremod-module-authentication",
+    "@coremod/logger": "file:../coremod-module-logger",
     "@coremod/express": "file:../coremod-module-express",
     "@coremod/public": "file:../coremod-module-public",
     "@coremod/typeorm": "file:../coremod-module-typeorm",

@@ -51,6 +51,7 @@
   "gitHead": "a1da132794b5ccb178313ae7ce45b87c197ced3f",
   "files": [
     "src",
+    "database",
     "index.ts",
     "LICENSE",
     "README.md"
