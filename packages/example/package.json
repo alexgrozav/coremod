@@ -1,6 +1,6 @@
 {
   "name": "@coremod/examples",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "",
   "main": "index.ts",
@@ -14,8 +14,8 @@
   "license": "ISC",
   "dependencies": {
     "@coremod/authentication": "file:../coremod-module-authentication",
-    "@coremod/logger": "file:../coremod-module-logger",
     "@coremod/express": "file:../coremod-module-express",
+    "@coremod/logger": "file:../coremod-module-logger",
     "@coremod/public": "file:../coremod-module-public",
     "@coremod/typeorm": "file:../coremod-module-typeorm",
     "bcrypt": "^5.0.0",
