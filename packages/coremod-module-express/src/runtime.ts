@@ -3,7 +3,7 @@ import {
     CoremodModuleOptions,
     CoremodModuleRuntimeConfiguration,
     CoremodModuleRuntimeContext
-} from "coremod/src/types";
+} from "coremod";
 import { Application } from 'express';
 import { createExpressServer } from 'routing-controllers';
 import { authorizationChecker, currentUserChecker } from './auth';

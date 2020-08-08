@@ -3,7 +3,7 @@ import {
     CoremodModuleOptions,
     CoremodModuleRuntimeConfiguration,
     CoremodModuleRuntimeContext
-} from 'coremod/src/types';
+} from 'coremod';
 import passport from 'passport';
 import { Strategy as JwtStrategy } from 'passport-jwt';
 import { getRepository } from 'typeorm';

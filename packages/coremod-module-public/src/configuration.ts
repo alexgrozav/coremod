@@ -1,5 +1,5 @@
 import { resolve } from 'path';
-import { CoremodModuleRuntimeConfiguration } from "coremod/src/types";
+import { CoremodModuleRuntimeConfiguration } from "coremod";
 
 export const configuration: CoremodModuleRuntimeConfiguration = {
     application: {

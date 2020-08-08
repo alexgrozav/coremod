@@ -3,7 +3,7 @@ import {
     CoremodModuleRuntimeContext,
     CoremodModuleRuntime,
     CoremodModuleOptions
-} from "coremod/src/types";
+} from "coremod";
 
 export const runtime: CoremodModuleRuntime = (context: CoremodModuleRuntimeContext, configuration: CoremodModuleRuntimeConfiguration, moduleOptions: CoremodModuleOptions) => {
     console.log(context, configuration, moduleOptions)

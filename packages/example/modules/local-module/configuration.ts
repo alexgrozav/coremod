@@ -1,4 +1,4 @@
-import { CoremodModuleRuntimeConfiguration } from "coremod/src/types";
+import { CoremodModuleRuntimeConfiguration } from "coremod";
 
 export const configuration: CoremodModuleRuntimeConfiguration = {
     host: process.env.HOST || 'localhost',

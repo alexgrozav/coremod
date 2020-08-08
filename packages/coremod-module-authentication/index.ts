@@ -1,6 +1,7 @@
-import { CoremodModule } from 'coremod/src/types';
+import { CoremodModule } from 'coremod';
 import { configuration, moduleOptions, runtime } from './src';
 
+export * from './src';
 export default {
     namespace: 'authentication',
     configuration,

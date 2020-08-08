@@ -1,9 +1,9 @@
 import { resolve } from 'path';
-import { CoremodConfiguration } from "coremod/src/types";
+import { CoremodConfiguration } from "coremod";
 
 export const configuration: CoremodConfiguration = {
     modules: [
-        [resolve(__dirname, 'src', 'module'), {
+        [resolve(__dirname, 'modules', 'local-module'), {
             something: true,
             configuration: {
                 host: '3031'
@@ -14,6 +14,12 @@ export const configuration: CoremodConfiguration = {
             favicon: false
         }],
         require.resolve('@coremod/typeorm'),
-        require.resolve('@coremod/authentication')
+        [require.resolve('@coremod/authentication'), {
+            configuration: {
+                jwt: {
+                    secretOrKey: '##helloworld1234##'
+                }
+            }
+        }]
     ]
 };

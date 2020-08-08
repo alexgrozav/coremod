@@ -1,4 +1,4 @@
-import { CoremodModule } from "coremod/src/types";
+import { CoremodModule } from "coremod";
 import { configuration } from './configuration';
 import { runtime } from './runtime';
 

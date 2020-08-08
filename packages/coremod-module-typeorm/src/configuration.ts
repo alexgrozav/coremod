@@ -1,5 +1,4 @@
-import { CoremodModuleRuntimeConfiguration } from "coremod/src/types";
-import { env } from "coremod/src/env";
+import { CoremodModuleRuntimeConfiguration, env } from "coremod";
 
 export const configuration: CoremodModuleRuntimeConfiguration = {
     /*

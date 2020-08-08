@@ -3,7 +3,7 @@ import {
     CoremodModuleOptions,
     CoremodModuleRuntimeConfiguration,
     CoremodModuleRuntimeContext
-} from "coremod/src/types";
+} from "coremod";
 import { createConnection, getConnectionOptions } from 'typeorm';
 import { useContainer as ormUseContainer } from 'typeorm';
 import { Container } from 'typedi';

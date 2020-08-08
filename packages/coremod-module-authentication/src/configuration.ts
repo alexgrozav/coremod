@@ -1,6 +1,5 @@
-import { CoremodModuleRuntimeConfiguration } from 'coremod/src/types';
+import { CoremodModuleRuntimeConfiguration, env } from 'coremod';
 import { ExtractJwt, StrategyOptions as JwtStrategyOptions } from 'passport-jwt';
-import { env } from "coremod/src/env";
 
 export const configuration: CoremodModuleRuntimeConfiguration = {
     /**

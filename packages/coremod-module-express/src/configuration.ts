@@ -1,6 +1,5 @@
 import { resolve } from 'path';
-import { CoremodModuleRuntimeConfiguration } from "coremod/src/types";
-import { env } from "coremod/src/env";
+import { CoremodModuleRuntimeConfiguration, env } from "coremod";
 
 const pkg = require(resolve(process.cwd(), 'package.json'));
 

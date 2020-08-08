@@ -18,6 +18,7 @@ export class Coremod {
     public async initialize() {
         dotenv({ path: this.configuration.env });
 
+        this.runtimeConfiguration.env = process.env.NODE_ENV || 'development';
         this.runtimeContext.onExit = this.onExit;
 
         if (!(this.configuration.modules && this.configuration.modules.length > 0)) {
@@ -37,16 +38,11 @@ export class Coremod {
             // Extend module runtime configuration
             if (module.namespace) {
                 this.runtimeConfiguration = deepmerge(this.runtimeConfiguration, {
-                    [module.namespace]: {
-                        ...(module.configuration || {}),
-                        ...(moduleOptions.configuration || {})
-                    }
+                    [module.namespace]: deepmerge(module.configuration || {}, moduleOptions.configuration || {})
                 });
             } else {
-                this.runtimeConfiguration = deepmerge(this.runtimeConfiguration, {
-                    ...(module.configuration || {}),
-                    ...(moduleOptions.configuration || {})
-                });
+                this.runtimeConfiguration = deepmerge(this.runtimeConfiguration,
+                    deepmerge(module.configuration || {}, moduleOptions.configuration || {}));
             }
 
             // Extend module options

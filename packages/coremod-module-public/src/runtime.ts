@@ -3,7 +3,7 @@ import {
     CoremodModuleOptions,
     CoremodModuleRuntimeConfiguration,
     CoremodModuleRuntimeContext
-} from "coremod/src/types";
+} from "coremod";
 import * as express from 'express';
 import favicon from 'serve-favicon';
 import { resolve } from "path";
