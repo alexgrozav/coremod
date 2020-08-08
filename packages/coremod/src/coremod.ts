@@ -18,6 +18,8 @@ export class Coremod {
     public async initialize() {
         dotenv({ path: this.configuration.env });
 
+        this.runtimeContext.onExit = this.onExit;
+
         if (!(this.configuration.modules && this.configuration.modules.length > 0)) {
             return;
         }
@@ -68,5 +70,28 @@ export class Coremod {
             await module.runtime(this.runtimeContext, this.runtimeConfiguration, moduleOptions);
         }
     }
+
+    public onExit(callback = () => {}) {
+        // Attach user callback to the process event emitter
+        // If no callback, it will still exit gracefully on Ctrl-C
+        process.on('cleanup', callback);
+
+        // App specific cleaning before exiting
+        process.on('exit', () => {
+            // @ts-ignore
+            process.emit('cleanup');
+        });
+
+        // catch ctrl+c event and exit normally
+        process.on('SIGINT', () => {
+            process.exit(2);
+        });
+
+        // Catch uncaught exceptions, trace, then exit normally
+        process.on('uncaughtException', (error) => {
+            console.error(error);
+            process.exit(99);
+        });
+    };
 }
 

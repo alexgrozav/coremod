@@ -1,5 +1,6 @@
 import { CoremodModuleRuntimeConfiguration } from 'coremod/src/types';
 import { ExtractJwt, StrategyOptions as JwtStrategyOptions } from 'passport-jwt';
+import { env } from "coremod/src/env";
 
 export const configuration: CoremodModuleRuntimeConfiguration = {
     /**
@@ -23,20 +24,20 @@ export const configuration: CoremodModuleRuntimeConfiguration = {
          * This value is a string or buffer containing the secret (symmetric) or
          * PEM-encoded public key (asymmetric) for verifying the token's signature.
          */
-        secretOrKey: process.env.APP_KEY || '',
+        secretOrKey: env.get(process.env.APP_KEY, ''),
 
         /**
          * App Key Issuer
          *
          * If defined the token issuer (iss) will be verified against this value.
          */
-        issuer: process.env.APP_KEY_ISSUER || '',
+        issuer: env.get(process.env.APP_KEY_ISSUER, ''),
 
         /**
          * App Key Audience
          *
          * If defined, the token audience (aud) will be verified against this value.
          */
-        audience: process.env.APP_KEY_AUDIENCE || '',
+        audience: env.get(process.env.APP_KEY_AUDIENCE, ''),
     } as JwtStrategyOptions
 };

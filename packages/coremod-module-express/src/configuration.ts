@@ -1,5 +1,8 @@
 import { resolve } from 'path';
 import { CoremodModuleRuntimeConfiguration } from "coremod/src/types";
+import { env } from "coremod/src/env";
+
+const pkg = require(resolve(process.cwd(), 'package.json'));
 
 export const configuration: CoremodModuleRuntimeConfiguration = {
     application: {
@@ -10,7 +13,7 @@ export const configuration: CoremodModuleRuntimeConfiguration = {
          * need to place the application's name in a email, view or
          * other location.
          */
-        name: process.env.APP_NAME || 'Application',
+        name: env.get('APP_NAME', 'Application'),
 
         /**
          * App Key
@@ -18,12 +21,12 @@ export const configuration: CoremodModuleRuntimeConfiguration = {
          * App key is a randomly generated 16 or 32 characters long string required
          * to encrypt cookies, sessions and other sensitive data.
          */
-        key: process.env.APP_KEY || '',
+        key: env.get('APP_KEY', ''),
 
         /**
          * Application Version
          */
-        version: process.env.APP_VERSION || '1.0.0',
+        version: pkg.version,
 
         /**
          * Application Description
@@ -31,7 +34,7 @@ export const configuration: CoremodModuleRuntimeConfiguration = {
          * This value is the description of your application and can used when you
          * need to provide more details about it.
          */
-        description: process.env.APP_DESCRIPTION || 'My awesome Coremod application.',
+        description: pkg.description,
 
         /**
          * Application Host
@@ -39,7 +42,7 @@ export const configuration: CoremodModuleRuntimeConfiguration = {
          * This value represents the host address where the application is running.
          * Use a value of 0.0.0.0 for docker and kubernetes.
          */
-        host: process.env.APP_HOST || 'localhost',
+        host: env.get('APP_HOST', 'localhost'),
 
         /**
          * Application Schema
@@ -47,14 +50,14 @@ export const configuration: CoremodModuleRuntimeConfiguration = {
          * This value represents the schema under which the application is served.
          * Can be either `http` or `https`.
          */
-        schema: process.env.APP_SCHEMA || 'http',
+        schema: env.get('APP_SCHEMA', 'http'),
 
         /**
          * Application Route Prefix
          *
          * This value adds an application-wide route prefix such as `/api`.
          */
-        routePrefix: process.env.APP_ROUTE_PREFIX || '',
+        routePrefix: env.get('APP_ROUTE_PREFIX', ''),
 
         /**
          * Application Port
@@ -62,7 +65,7 @@ export const configuration: CoremodModuleRuntimeConfiguration = {
          * This value sets the port under which the application will be served.
          * A default value of 4000 is provided.
          */
-        port: process.env.APP_PORT || '4000',
+        port: env.normalizePort(process.env.PORT || env.get('APP_PORT', '4000')),
 
         /**
          * Cross Origin Resource Sharing

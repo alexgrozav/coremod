@@ -33,11 +33,15 @@
     "typeorm": "^0.2.25",
     "typescript": "^3.9.7"
   },
-  "gitHead": "7f7b50d9f20692eea74115e5537f43f8c41eed76",
+  "gitHead": "a1da132794b5ccb178313ae7ce45b87c197ced3f",
   "files": [
     "src",
     "index.ts",
     "LICENSE",
     "README.md"
-  ]
+  ],
+  "dependencies": {
+    "event-dispatch": "^0.4.1",
+    "glob": "^7.1.6"
+  }
 }

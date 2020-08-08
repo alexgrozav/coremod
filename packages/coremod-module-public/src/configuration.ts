@@ -8,6 +8,6 @@ export const configuration: CoremodModuleRuntimeConfiguration = {
         }
     },
     paths: {
-        public: resolve('.', 'public')
+        public: resolve(process.cwd(), 'public')
     },
 };
