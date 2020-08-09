@@ -18,12 +18,12 @@ export class UserService {
 
     public list(): Promise<User[]> {
         this.log.info('Find all users');
-        return this.userRepository.find({ relations: ['roles'] });
+        return this.userRepository.find({ relations: ['roles', 'profile'] });
     }
 
     public find(id: string): Promise<User | undefined> {
         this.log.info('Find one user');
-        return this.userRepository.findOne({ id }, { relations: ['roles'] });
+        return this.userRepository.findOne({ id }, { relations: ['roles', 'profile'] });
     }
 
     public async create(user: User): Promise<User> {

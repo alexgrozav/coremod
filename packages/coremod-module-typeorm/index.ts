@@ -1,7 +1,7 @@
 import { CoremodModule } from 'coremod';
 import { commands, configuration, moduleOptions, runtime } from './src';
 
-export * from './src/dispatch';
+export * from './src';
 export default {
     namespace: 'database',
     configuration,

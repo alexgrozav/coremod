@@ -24,7 +24,9 @@
     "coremod": "file:../coremod",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
+    "event-dispatch": "^0.4.1",
     "express": "^4.17.1",
+    "faker": "^4.1.0",
     "minimist": "^1.2.5",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
@@ -32,6 +34,7 @@
     "routing-controllers-openapi": "^2.0.1",
     "typedi": "^0.8.0",
     "typeorm": "^0.2.25",
+    "typeorm-seeding": "^1.6.1",
     "typeorm-typedi-extensions": "^0.2.3"
   },
   "devDependencies": {
