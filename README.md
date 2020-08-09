@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://coremod.io/">
-        <img src="https://raw.githubusercontent.com/coremod-io/coremod/master/.github/logo.svg" alt="Coremod logo" width=72 height=63>
+        <img src="https://raw.githubusercontent.com/coremod-io/coremod/master/logo.svg" alt="Coremod logo" width=72 height=63>
     </a>
 </p>
 
