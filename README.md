@@ -19,11 +19,8 @@
 <br/>
 
 <p align="center">
-    <a href="https://www.npmjs.com/package/@inkline/inkline">
+    <a href="https://www.npmjs.com/package/coremod">
         <img src="https://img.shields.io/npm/v/coremod.svg" alt="npm version">
-    </a>
-    <a href="https://github.com/inkline/inkline/actions">
-        <img src="https://github.com/coremod-io/coremod/workflows/Build/badge.svg" alt="Build">
     </a>
     <a href="https://www.npmjs.com/package/coremod">
         <img src="https://img.shields.io/npm/dm/coremod.svg" alt="Downloads">
@@ -105,8 +102,7 @@ export const configuration: CoremodConfiguration = {
 };
 ~~~
 
-### Local Modules
-
+### Writing a module
 Create a local module in `modules/local-module` and add the following starter code to `modules/local-module/index.ts`:
 
 ~~~typescript
