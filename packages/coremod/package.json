@@ -52,5 +52,8 @@
     "tslint.json",
     "LICENSE",
     "README.md"
-  ]
+  ],
+  "bin": {
+    "coremod": "./cli.ts"
+  }
 }

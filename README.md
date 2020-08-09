@@ -44,20 +44,17 @@
 First, install the Coremod CLI globally.
 
 ~~~
-npm install -g coremod
+npm install -g ts-node coremod
+~~~
+
+Next, add Coremod to your project and install all peer dependencies.
+
+~~~
+npm install -S coremod typeorm typeorm-seeding typedi typeorm-typedi-extensions bcrypt dotenv class-transformer class-validator routing-controllers routing-controllers-openapi event-dispatch express cors faker passport passport-jwt
 ~~~
 
 ~~~
 coremod --help
-~~~
-
-Next, add Coremod to your project and install all peer dependencies.
-~~~
-npm install -S coremod ts-node
-~~~
-
-~~~
-npm install -S typeorm typeorm-seeding typedi typeorm-typedi-extensions bcrypt dotenv class-transformer class-validator routing-controllers routing-controllers-openapi event-dispatch express cors faker passport passport-jwt
 ~~~
 
 ### Modules
