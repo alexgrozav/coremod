@@ -6,5 +6,8 @@
 export const events = {
     user: {
         created: 'onUserCreate',
+    },
+    userRole: {
+        created: 'onUserRoleCreate',
     }
 };

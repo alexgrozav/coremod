@@ -5,12 +5,12 @@ import {
 } from 'routing-controllers';
 import { OpenAPI, ResponseSchema } from 'routing-controllers-openapi';
 
-import { UserNotFoundError } from '@app/errors/UserNotFoundError';
+import { UserNotFoundError } from '@app/errors';
 import { User } from '@app/models/User';
 import { UserService } from '@app/services/UserService';
-import { UserRoleResponse } from '@app/api/controllers/UserRoleController';
+import { UserRoleResponse } from '@app/controllers/UserRoleController';
 
-class BaseUserResponse {
+class BaseUserBody {
     @IsNotEmpty()
     public firstName: string;
 
@@ -25,7 +25,7 @@ class BaseUserResponse {
     public username: string;
 }
 
-export class UserResponse extends BaseUserResponse {
+export class UserResponse extends BaseUserBody {
     @IsUUID()
     public id: string;
 
@@ -34,7 +34,7 @@ export class UserResponse extends BaseUserResponse {
     public roles: UserRoleResponse[];
 }
 
-class CreateUserRequest extends BaseUser {
+class CreateUserRequest extends BaseUserBody {
     @IsNotEmpty()
     public password: string;
 }
@@ -82,7 +82,7 @@ export class UserController {
     @Put('/:id')
     @Authorized()
     @ResponseSchema(UserResponse)
-    public update(@Param('id') id: string, @Body() body: BaseUser): Promise<User> {
+    public update(@Param('id') id: string, @Body() body: BaseUserBody): Promise<User> {
         const user = new User();
         user.email = body.email;
         user.firstName = body.firstName;

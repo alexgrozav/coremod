@@ -5,8 +5,8 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "start": "ts-node src/index.ts",
-    "coremod": "ts-node node_modules/coremod/cli.ts",
+    "start": "ts-node -r tsconfig-paths/register src/index.ts",
+    "coremod": "ts-node -r tsconfig-paths/register node_modules/coremod/cli.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
