@@ -3,7 +3,7 @@
   "version": "0.1.5",
   "private": true,
   "description": "",
-  "main": "index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "start": "ts-node -r tsconfig-paths/register src/index.ts",
     "coremod": "ts-node -r tsconfig-paths/register node_modules/coremod/cli.ts",

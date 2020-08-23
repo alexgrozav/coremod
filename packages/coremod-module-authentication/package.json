@@ -2,7 +2,7 @@
   "name": "@coremod/authentication",
   "version": "0.1.5",
   "description": "Express Passport authentication for Coremod Typescript Node.js application.",
-  "main": "index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc -d",
     "test": "echo \"Error: no test specified\" && exit 1"
