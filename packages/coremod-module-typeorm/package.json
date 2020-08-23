@@ -37,6 +37,7 @@
   "gitHead": "d2ee10864ca62e728b969fc33a73a5f6c9edab0a",
   "files": [
     "src",
+    "dist",
     "index.ts",
     "LICENSE",
     "README.md"
