@@ -7,6 +7,7 @@
   "scripts": {
     "postinstall": "npm run bootstrap",
     "bootstrap": "lerna exec npm install && lerna link",
+    "build": "lerna exec npm run build",
     "clean": "npm run clean:node_modules",
     "clean:node_modules": "lerna exec 'rm -r node_modules'"
   }

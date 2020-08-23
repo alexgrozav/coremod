@@ -1,0 +1,1 @@
+{"version":3,"file":"migration.js","sourceRoot":"","sources":["../../../../src/commands/make/migration.ts"],"names":[],"mappings":";;;AAAA,iDAA4C;AAErC,KAAK,UAAU,SAAS,CAAC,IAAI;IAChC,MAAM,eAAK,CAAC,SAAS,EAAE;QACnB,IAAI,EAAE,yBAAyB;QAC/B,6BAA6B;QAC7B,kBAAkB;QAClB,IAAI,EAAE,IAAI,CAAC,IAAI;KAClB,EAAE,EAAE,CAAC,CAAC;AACX,CAAC;AAPD,8BAOC"}

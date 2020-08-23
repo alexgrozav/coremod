@@ -4,7 +4,8 @@
   "description": "Express module for Coremod Typescript Node.js application.",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+      "build": "tsc -d",
+      "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
