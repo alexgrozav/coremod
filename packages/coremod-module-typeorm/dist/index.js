@@ -1,13 +1,20 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const src_1 = require("./src");
-tslib_1.__exportStar(require("./src"), exports);
+const configuration_1 = require("./configuration");
+const module_options_1 = require("./module-options");
+const runtime_1 = require("./runtime");
+const commands_1 = require("./commands");
+tslib_1.__exportStar(require("./configuration"), exports);
+tslib_1.__exportStar(require("./module-options"), exports);
+tslib_1.__exportStar(require("./runtime"), exports);
+tslib_1.__exportStar(require("./commands"), exports);
+tslib_1.__exportStar(require("./dispatch"), exports);
 exports.default = {
     namespace: 'database',
-    configuration: src_1.configuration,
-    moduleOptions: src_1.moduleOptions,
-    runtime: src_1.runtime,
-    commands: src_1.commands
+    configuration: configuration_1.configuration,
+    moduleOptions: module_options_1.moduleOptions,
+    runtime: runtime_1.runtime,
+    commands: commands_1.commands
 };
 //# sourceMappingURL=index.js.map

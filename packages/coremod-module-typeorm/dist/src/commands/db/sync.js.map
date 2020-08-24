@@ -1,1 +1,0 @@
-{"version":3,"file":"sync.js","sourceRoot":"","sources":["../../../../src/commands/db/sync.ts"],"names":[],"mappings":";;;AAAA,sDAAiD;AAE1C,KAAK,UAAU,IAAI,CAAC,IAAI;IAC3B,MAAM,eAAK,CAAC,SAAS,EAAE;QACnB,IAAI,EAAE,yBAAyB;QAC/B,6BAA6B;QAC7B,aAAa;KAChB,EAAE,EAAE,CAAC,CAAC;AACX,CAAC;AAND,oBAMC"}

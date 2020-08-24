@@ -1,1 +1,0 @@
-{"version":3,"file":"subscriber.js","sourceRoot":"","sources":["../../../../src/commands/make/subscriber.ts"],"names":[],"mappings":";;;AAAA,sDAAiD;AAE1C,KAAK,UAAU,UAAU,CAAC,IAAI;IACjC,MAAM,eAAK,CAAC,SAAS,EAAE;QACnB,IAAI,EAAE,yBAAyB;QAC/B,6BAA6B;QAC7B,mBAAmB;QACnB,IAAI,EAAE,IAAI,CAAC,IAAI;KAClB,EAAE,EAAE,CAAC,CAAC;AACX,CAAC;AAPD,gCAOC"}

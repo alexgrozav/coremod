@@ -1,1 +1,0 @@
-{"version":3,"file":"setupDev.js","sourceRoot":"","sources":["../../../../src/commands/db/setupDev.ts"],"names":[],"mappings":";;;AAAA,iCAA8B;AAC9B,uCAAoC;AACpC,uCAAoC;AAE7B,KAAK,UAAU,QAAQ,CAAC,IAAI;IAC/B,2DAA2D;IAC3D,MAAM,WAAI,CAAC,IAAI,CAAC,CAAC;IACjB,MAAM,iBAAO,CAAC,IAAI,CAAC,CAAC;IACpB,MAAM,iBAAO,CAAC,IAAI,CAAC,CAAC;AACxB,CAAC;AALD,4BAKC"}
