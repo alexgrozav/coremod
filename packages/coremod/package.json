@@ -1,6 +1,6 @@
 {
   "name": "coremod",
-  "version": "0.1.9",
+  "version": "0.1.11",
   "description": "Essential Node.js application modules written in Typescript.",
   "main": "dist/index.js",
   "scripts": {
