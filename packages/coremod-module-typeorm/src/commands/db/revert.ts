@@ -1,4 +1,4 @@
-import { spawn } from 'coremod/cli/helpers';
+import { spawn } from 'coremod/dist/cli/helpers';
 
 export async function revert(argv) {
     await spawn('ts-node', [
