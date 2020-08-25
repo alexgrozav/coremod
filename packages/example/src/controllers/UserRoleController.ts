@@ -4,9 +4,9 @@ import {
 } from 'routing-controllers';
 import { OpenAPI, ResponseSchema } from 'routing-controllers-openapi';
 
-import { UserRoleNotFoundError } from '@app/errors';
-import { UserRole } from '@app/models/UserRole';
-import { UserRoleService } from '@app/services/UserRoleService';
+import { UserRoleNotFoundError } from '@coremod/authentication/dist/errors';
+import { UserRole } from '@coremod/authentication/dist/models/UserRole';
+import { UserRoleService } from '@coremod/authentication/dist/services/UserRoleService';
 
 class BaseUserRoleBody {
     @IsNotEmpty()

@@ -4,13 +4,12 @@ import { v4 as uuid } from 'uuid';
 
 import { EventDispatcher, EventDispatcherInterface } from '@coremod/typeorm';
 import { DLogger, LoggerInterface } from '@coremod/logger';
-import { UserRole } from '@app/models/UserRole';
-import { UserRoleRepository } from '@app/repositories/UserRoleRepository';
-import { events } from '@app/subscribers/events';
+import { UserRole } from '../models/UserRole';
+import { UserRoleRepository } from '../repositories';
+import { events } from '../subscribers';
 
 @Service()
 export class UserRoleService {
-
     constructor(
         @OrmRepository() private userRoleRepository: UserRoleRepository,
         @EventDispatcher() private eventDispatcher: EventDispatcherInterface,

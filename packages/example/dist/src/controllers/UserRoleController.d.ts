@@ -1,5 +1,5 @@
-import { UserRole } from '@app/models/UserRole';
-import { UserRoleService } from '@app/services/UserRoleService';
+import { UserRole } from '@coremod/authentication/dist/models/UserRole';
+import { UserRoleService } from '@coremod/authentication/dist/services/UserRoleService';
 declare class BaseUserRoleBody {
     name: string;
     description: string;

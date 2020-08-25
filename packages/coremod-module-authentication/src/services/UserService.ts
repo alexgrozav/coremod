@@ -4,9 +4,9 @@ import { v4 as uuid } from 'uuid';
 
 import { EventDispatcher, EventDispatcherInterface } from '@coremod/typeorm';
 import { DLogger, LoggerInterface } from '@coremod/logger';
-import { User } from '@app/models/User';
-import { UserRepository } from '@app/repositories/UserRepository';
-import { events } from '@app/subscribers/events';
+import { User } from '../models/User';
+import { UserRepository } from '../repositories';
+import { events } from '../subscribers';
 
 @Service()
 export class UserService {

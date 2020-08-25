@@ -8,6 +8,10 @@ tslib_1.__exportStar(require("./configuration"), exports);
 tslib_1.__exportStar(require("./module-options"), exports);
 tslib_1.__exportStar(require("./runtime"), exports);
 tslib_1.__exportStar(require("./models"), exports);
+tslib_1.__exportStar(require("./repositories"), exports);
+tslib_1.__exportStar(require("./services"), exports);
+tslib_1.__exportStar(require("./subscribers"), exports);
+tslib_1.__exportStar(require("./errors"), exports);
 exports.default = {
     namespace: 'authentication',
     configuration: configuration_1.configuration,

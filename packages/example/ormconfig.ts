@@ -7,13 +7,14 @@ const baseConfiguration = {
         "src/models/**/*"
     ],
     migrations: [
-        "node_modules/@coremod/authentication/database/migrations/**/*",
+        "node_modules/@coremod/authentication/src/database/migrations/**/*",
         "src/database/migrations/**/*"
     ],
     factories: [
         'src/database/factories/**/*'
     ],
     subscribers: [
+        "node_modules/@coremod/authentication/src/subscribers/**/*",
         "src/subscribers/**/*"
     ],
     cli: {

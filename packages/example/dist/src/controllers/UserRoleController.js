@@ -5,9 +5,9 @@ const tslib_1 = require("tslib");
 const class_validator_1 = require("class-validator");
 const routing_controllers_1 = require("routing-controllers");
 const routing_controllers_openapi_1 = require("routing-controllers-openapi");
-const errors_1 = require("@app/errors");
-const UserRole_1 = require("@app/models/UserRole");
-const UserRoleService_1 = require("@app/services/UserRoleService");
+const errors_1 = require("@coremod/authentication/dist/errors");
+const UserRole_1 = require("@coremod/authentication/dist/models/UserRole");
+const UserRoleService_1 = require("@coremod/authentication/dist/services/UserRoleService");
 class BaseUserRoleBody {
 }
 tslib_1.__decorate([

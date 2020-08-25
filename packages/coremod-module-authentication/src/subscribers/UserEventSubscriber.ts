@@ -1,8 +1,8 @@
 import { EventSubscriber, On } from 'event-dispatch';
 
 import { Logger } from '@coremod/logger';
-import { User } from '@app/models/User';
-import { events } from '@app/subscribers/events';
+import { User } from '../models/User';
+import { events } from './events';
 
 const log = new Logger(__filename);
 

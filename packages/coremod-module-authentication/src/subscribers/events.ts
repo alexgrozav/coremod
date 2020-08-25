@@ -9,5 +9,8 @@ export const events = {
     },
     userRole: {
         created: 'onUserRoleCreate',
+    },
+    userProfile: {
+        created: 'onUserProfileCreate',
     }
 };
