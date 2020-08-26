@@ -23,7 +23,6 @@ class Coremod {
             if (Array.isArray(module)) {
                 [module, moduleOptions] = module;
             }
-            module = module;
             // Extend module runtime configuration
             if (module.namespace) {
                 this.runtimeConfiguration = deepmerge_1.default(this.runtimeConfiguration, {
