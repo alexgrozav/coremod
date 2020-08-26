@@ -12,9 +12,11 @@ export * from './services';
 export * from './subscribers';
 export * from './errors';
 
-export default {
+export const module: CoremodModule = {
     namespace: 'authentication',
     configuration,
     moduleOptions,
     runtime
-} as CoremodModule;
+};
+
+export default module;

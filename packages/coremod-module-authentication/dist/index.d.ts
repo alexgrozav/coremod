@@ -7,5 +7,5 @@ export * from './repositories';
 export * from './services';
 export * from './subscribers';
 export * from './errors';
-declare const _default: CoremodModule;
-export default _default;
+export declare const module: CoremodModule;
+export default module;

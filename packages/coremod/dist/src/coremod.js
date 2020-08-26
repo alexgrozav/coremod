@@ -18,13 +18,12 @@ class Coremod {
         if (!(this.configuration.modules && this.configuration.modules.length > 0)) {
             return;
         }
-        for (let moduleName of this.configuration.modules) {
+        for (let module of this.configuration.modules) {
             let moduleOptions = {};
-            if (Array.isArray(moduleName)) {
-                [moduleName, moduleOptions] = moduleName;
+            if (Array.isArray(module)) {
+                [module, moduleOptions] = module;
             }
-            // Load module
-            const { default: module } = await this.loadModule(moduleName);
+            module = module;
             // Extend module runtime configuration
             if (module.namespace) {
                 this.runtimeConfiguration = deepmerge_1.default(this.runtimeConfiguration, {
@@ -39,13 +38,6 @@ class Coremod {
             // Store module and module options
             this.modules.push([module, moduleOptions]);
         }
-    }
-    async loadModule(moduleName) {
-        return new Promise((resolve) => {
-            Promise.resolve().then(() => tslib_1.__importStar(require(require.resolve(moduleName)))).then((module) => {
-                resolve(module);
-            });
-        });
     }
     async run() {
         for (const [module, moduleOptions] of this.modules) {

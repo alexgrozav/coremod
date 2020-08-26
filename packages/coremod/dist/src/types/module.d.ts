@@ -8,7 +8,7 @@ export declare type CoremodModuleOptions = {
     [key: string]: any;
 };
 export interface CoremodModule {
-    namespace: string;
+    namespace?: string;
     commands?: CoremodCommands;
     moduleOptions?: CoremodModuleOptions;
     configuration?: CoremodModuleRuntimeConfiguration;

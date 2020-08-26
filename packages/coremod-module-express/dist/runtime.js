@@ -30,6 +30,15 @@ exports.runtime = (context, configuration, moduleOptions) => {
         authorizationChecker: configuration.application.authorizationChecker || auth_1.authorizationChecker,
         currentUserChecker: configuration.application.currentUserChecker || auth_1.currentUserChecker,
     });
+    if (moduleOptions.heartbeat) {
+        application.get(configuration.application.routePrefix, (req, res) => {
+            return res.status(200).json({
+                name: configuration.application.name,
+                version: configuration.application.version,
+                description: configuration.application.description,
+            });
+        });
+    }
     // Start express server
     const server = application.listen(configuration.application.port, configuration.application.host, () => {
         console.log(`Application running at ${configuration.application.schema}://${configuration.application.host}:${configuration.application.port}!`);

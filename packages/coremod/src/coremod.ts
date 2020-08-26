@@ -25,15 +25,14 @@ export class Coremod {
             return;
         }
 
-        for (let moduleName of this.configuration.modules) {
+        for (let module of this.configuration.modules) {
             let moduleOptions: CoremodModuleOptions = {};
 
-            if (Array.isArray(moduleName)) {
-                [moduleName, moduleOptions] = moduleName;
+            if (Array.isArray(module)) {
+                [module, moduleOptions] = module;
             }
 
-            // Load module
-            const { default: module } = await this.loadModule(moduleName as string) as { default: CoremodModule };
+            module = module as CoremodModule;
 
             // Extend module runtime configuration
             if (module.namespace) {
@@ -51,14 +50,6 @@ export class Coremod {
             // Store module and module options
             this.modules.push([module, moduleOptions]);
         }
-    }
-
-    private async loadModule(moduleName: string) {
-        return new Promise((resolve) => {
-            import(require.resolve(moduleName as string)).then((module) => {
-                resolve(module);
-            });
-        });
     }
 
     public async run() {

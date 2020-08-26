@@ -2,8 +2,10 @@ import { CoremodModule } from "coremod";
 import { configuration } from './configuration';
 import { runtime } from './runtime';
 
-export default {
+export const module: CoremodModule = {
     namespace: 'local',
     configuration,
     runtime
-} as CoremodModule;
+};
+
+export default module;

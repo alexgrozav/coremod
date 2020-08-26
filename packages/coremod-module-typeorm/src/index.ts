@@ -9,10 +9,13 @@ export * from './module-options';
 export * from './runtime';
 export * from './commands';
 export * from './dispatch';
-export default {
+
+export const module: CoremodModule = {
     namespace: 'database',
     configuration,
     moduleOptions,
     runtime,
     commands
-} as CoremodModule;
+};
+
+export default module;

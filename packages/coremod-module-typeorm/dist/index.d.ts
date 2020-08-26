@@ -4,5 +4,5 @@ export * from './module-options';
 export * from './runtime';
 export * from './commands';
 export * from './dispatch';
-declare const _default: CoremodModule;
-export default _default;
+export declare const module: CoremodModule;
+export default module;

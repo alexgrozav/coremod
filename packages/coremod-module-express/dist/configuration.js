@@ -64,7 +64,13 @@ exports.configuration = {
          *
          * This value sets whether cors is enabled in the application
          */
-        cors: true
+        cors: true,
+        /**
+         * Heartbeat
+         *
+         * Add basic root response and get application information and heartbeat
+         */
+        heartbeat: true
     },
     paths: {
         migrations: [

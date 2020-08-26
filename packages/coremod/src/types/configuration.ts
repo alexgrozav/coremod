@@ -1,4 +1,6 @@
+import { CoremodModule } from './module';
+
 export interface CoremodConfiguration {
     env?: string;
-    modules: Array<string | [string, any]>;
+    modules: Array<CoremodModule | [CoremodModule, any]>;
 }

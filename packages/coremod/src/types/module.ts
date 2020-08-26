@@ -9,7 +9,7 @@ export type CoremodModuleOptions = {
 };
 
 export interface CoremodModule {
-    namespace: string;
+    namespace?: string;
     commands?: CoremodCommands;
     moduleOptions?: CoremodModuleOptions;
     configuration?: CoremodModuleRuntimeConfiguration;

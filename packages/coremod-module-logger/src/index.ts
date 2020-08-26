@@ -5,8 +5,11 @@ import { runtime } from "./runtime";
 export * from './configuration';
 export * from './runtime';
 export * from './logger';
-export default {
+
+export const module: CoremodModule = {
     namespace: 'logs',
     configuration,
     runtime
-} as CoremodModule;
+};
+
+export default module;

@@ -6,8 +6,11 @@ import { moduleOptions } from "./module-options";
 export * from './configuration';
 export * from './runtime';
 export * from './module-options';
-export default {
+
+export const module: CoremodModule = {
     configuration,
     moduleOptions,
     runtime
-} as CoremodModule;
+};
+
+export default module;
