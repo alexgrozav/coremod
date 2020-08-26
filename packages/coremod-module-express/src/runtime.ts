@@ -4,7 +4,7 @@ import {
     CoremodModuleRuntimeConfiguration,
     CoremodModuleRuntimeContext
 } from "coremod";
-import { Application } from 'express';
+import { Application, Request, Response } from 'express';
 import { createExpressServer } from 'routing-controllers';
 import { authorizationChecker, currentUserChecker } from './auth';
 import { useContainer as classValidatorUseContainer } from 'class-validator';
@@ -37,6 +37,16 @@ export const runtime: CoremodModuleRuntime = (context: CoremodModuleRuntimeConte
         authorizationChecker: configuration.application.authorizationChecker || authorizationChecker,
         currentUserChecker: configuration.application.currentUserChecker || currentUserChecker,
     });
+
+    if (moduleOptions.heartbeat) {
+        application.get(configuration.application.routePrefix, (req: Request, res: Response) => {
+            return res.status(200).json({
+                name: configuration.application.name,
+                version: configuration.application.version,
+                description: configuration.application.description,
+            });
+        });
+    }
 
     // Start express server
     const server = application.listen(configuration.application.port, configuration.application.host, () => {
