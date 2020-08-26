@@ -18,7 +18,7 @@ class AddUserToUserRoleRelationTable1512663990063 {
                     name: 'user_role_id',
                     type: 'varchar',
                     length: '255',
-                    isPrimary: true,
+                    isPrimary: false,
                     isNullable: false
                 }
             ]
@@ -38,14 +38,14 @@ class AddUserToUserRoleRelationTable1512663990063 {
     }
     async up(queryRunner) {
         await queryRunner.createTable(this.table);
-        await queryRunner.createForeignKeys(this.table, [
+        await queryRunner.createForeignKeys(this.table.name, [
             this.userForeignKey,
             this.userRoleForeignKey
         ]);
     }
     async down(queryRunner) {
         await queryRunner.dropTable(this.table);
-        await queryRunner.dropForeignKeys(this.table, [
+        await queryRunner.dropForeignKeys(this.table.name, [
             this.userForeignKey,
             this.userRoleForeignKey
         ]);

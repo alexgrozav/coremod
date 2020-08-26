@@ -2,7 +2,7 @@ import * as Faker from 'faker';
 import { define } from 'typeorm-seeding';
 import { v4 as uuid } from 'uuid';
 
-import { User } from '@app/models/User';
+import { User } from '@coremod/authentication/src/models/User';
 
 define(User, (faker: typeof Faker, context: { roles: [] }) => {
     const gender = faker.random.number(1);

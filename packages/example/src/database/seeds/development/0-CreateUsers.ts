@@ -1,9 +1,9 @@
 import { Factory, Seeder } from 'typeorm-seeding';
 import { Connection } from 'typeorm/connection/Connection';
 
-import { User } from '@app/models/User';
-import { UserProfile } from '@app/models/UserProfile';
-import { UserRole } from '@app/models/UserRole';
+import { User } from '@coremod/authentication/src/models/User';
+import { UserProfile } from '@coremod/authentication/src/models/UserProfile';
+import { UserRole } from '@coremod/authentication/src/models/UserRole';
 
 export class CreateUsers implements Seeder {
     public async run(factory: Factory, connection: Connection): Promise<any> {

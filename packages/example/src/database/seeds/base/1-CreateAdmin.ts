@@ -2,9 +2,9 @@ import { Connection } from 'typeorm';
 import { Factory, Seeder } from 'typeorm-seeding';
 import { v4 as uuid } from 'uuid';
 
-import { User } from '@app/models/User';
-import { UserRole } from '@app/models/UserRole';
-import { UserProfile } from '@app/models/UserProfile';
+import { User } from '@coremod/authentication/src/models/User';
+import { UserRole } from '@coremod/authentication/src/models/UserRole';
+import { UserProfile } from '@coremod/authentication/src/models/UserProfile';
 
 export class CreateAdmin implements Seeder {
     public async run(factory: Factory, connection: Connection): Promise<void> {

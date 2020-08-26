@@ -34,7 +34,7 @@
     "typescript": "^3.9.7",
     "winston": "^3.3.3"
   },
-  "gitHead": "d2ee10864ca62e728b969fc33a73a5f6c9edab0a",
+  "gitHead": "8277b8e45844e881dc1fdcc65fab4e05f7039446",
   "files": [
     "src",
     "dist",

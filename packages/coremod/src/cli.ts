@@ -1,6 +1,6 @@
 #!/usr/bin/env ts-node
 import { resolve } from 'path';
-import { Coremod } from './src';
+import { Coremod } from './index';
 import yargs = require('yargs');
 import minimist = require('minimist');
 
