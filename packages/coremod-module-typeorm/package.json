@@ -34,7 +34,7 @@
     "typeorm": "^0.2.25",
     "typescript": "^3.9.7"
   },
-  "gitHead": "8277b8e45844e881dc1fdcc65fab4e05f7039446",
+  "gitHead": "55e96bbfd3ed02da8e1dcf81ece7f0fba92e1f7b",
   "files": [
     "src",
     "dist",

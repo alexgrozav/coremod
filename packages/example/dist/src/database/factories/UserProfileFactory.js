@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_seeding_1 = require("typeorm-seeding");
 const uuid_1 = require("uuid");
-const UserProfile_1 = require("@app/models/UserProfile");
+const UserProfile_1 = require("@coremod/authentication/src/models/UserProfile");
 typeorm_seeding_1.define(UserProfile_1.UserProfile, (faker, context) => {
     const bio = faker.random.words(100);
     const country = faker.address.countryCode();

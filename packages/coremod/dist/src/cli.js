@@ -2,14 +2,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const path_1 = require("path");
-const src_1 = require("./src");
+const index_1 = require("./index");
 const yargs = require("yargs");
 const minimist = require("minimist");
 (async () => {
     const argv = minimist(process.argv.slice(2));
     const configurationFile = path_1.resolve(argv.config || 'coremod.config.ts');
     const { configuration } = require(configurationFile);
-    const coremod = new src_1.Coremod(configuration);
+    const coremod = new index_1.Coremod(configuration);
     await coremod.initialize();
     const cli = yargs
         .scriptName("coremod")

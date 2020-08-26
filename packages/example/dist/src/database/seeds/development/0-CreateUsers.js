@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CreateUsers = void 0;
-const User_1 = require("@app/models/User");
-const UserProfile_1 = require("@app/models/UserProfile");
-const UserRole_1 = require("@app/models/UserRole");
+const User_1 = require("@coremod/authentication/src/models/User");
+const UserProfile_1 = require("@coremod/authentication/src/models/UserProfile");
+const UserRole_1 = require("@coremod/authentication/src/models/UserRole");
 class CreateUsers {
     async run(factory, connection) {
         const em = connection.createEntityManager();
