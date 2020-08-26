@@ -32,8 +32,6 @@ export class Coremod {
                 [module, moduleOptions] = module;
             }
 
-            module = module as CoremodModule;
-
             // Extend module runtime configuration
             if (module.namespace) {
                 this.runtimeConfiguration = deepmerge(this.runtimeConfiguration, {
