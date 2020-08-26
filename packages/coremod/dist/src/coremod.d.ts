@@ -5,7 +5,7 @@ export declare class Coremod {
     runtimeConfiguration: CoremodModuleRuntimeConfiguration;
     modules: [CoremodModule, CoremodModuleOptions][];
     constructor(configuration: CoremodConfiguration);
-    initialize(): Promise<void>;
+    initialize(): void;
     run(): Promise<void>;
     onExit(callback?: () => void): void;
 }

@@ -11,7 +11,7 @@ class Coremod {
         this.runtimeConfiguration = {};
         this.modules = [];
     }
-    async initialize() {
+    initialize() {
         dotenv_1.config({ path: this.configuration.env });
         this.runtimeConfiguration.env = process.env.NODE_ENV || 'development';
         this.runtimeContext.onExit = this.onExit;

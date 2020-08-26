@@ -15,7 +15,7 @@ export class Coremod {
 
     constructor(public configuration: CoremodConfiguration) {}
 
-    public async initialize() {
+    public initialize() {
         dotenv({ path: this.configuration.env });
 
         this.runtimeConfiguration.env = process.env.NODE_ENV || 'development';

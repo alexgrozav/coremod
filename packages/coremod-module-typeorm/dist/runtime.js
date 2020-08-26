@@ -25,6 +25,7 @@ const typeorm_2 = require("typeorm");
 const typedi_1 = require("typedi");
 const glob_1 = require("glob");
 exports.runtime = async (context, configuration, moduleOptions) => {
+    typeorm_2.useContainer(typedi_1.Container);
     const loadedConnectionOptions = await typeorm_1.getConnectionOptions();
     const connectionOptions = Object.assign(loadedConnectionOptions, {
         type: configuration.database.type,
@@ -41,7 +42,6 @@ exports.runtime = async (context, configuration, moduleOptions) => {
     const connection = await typeorm_1.createConnection(connectionOptions);
     context.connection = connection;
     context.onExit(() => connection.close());
-    typeorm_2.useContainer(typedi_1.Container);
     const patterns = configuration.paths.subscribers;
     patterns.forEach((pattern) => {
         const files = glob_1.sync(pattern);

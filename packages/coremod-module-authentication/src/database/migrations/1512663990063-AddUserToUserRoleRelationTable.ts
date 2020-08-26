@@ -15,7 +15,7 @@ export class AddUserToUserRoleRelationTable1512663990063 implements MigrationInt
                 name: 'user_role_id',
                 type: 'varchar',
                 length: '255',
-                isPrimary: true,
+                isPrimary: false,
                 isNullable: false
             }
         ]
@@ -37,7 +37,7 @@ export class AddUserToUserRoleRelationTable1512663990063 implements MigrationInt
 
     public async up(queryRunner: QueryRunner): Promise<any> {
         await queryRunner.createTable(this.table);
-        await queryRunner.createForeignKeys(this.table, [
+        await queryRunner.createForeignKeys(this.table.name, [
             this.userForeignKey,
             this.userRoleForeignKey
         ]);
@@ -45,7 +45,7 @@ export class AddUserToUserRoleRelationTable1512663990063 implements MigrationInt
 
     public async down(queryRunner: QueryRunner): Promise<any> {
         await queryRunner.dropTable(this.table);
-        await queryRunner.dropForeignKeys(this.table, [
+        await queryRunner.dropForeignKeys(this.table.name, [
             this.userForeignKey,
             this.userRoleForeignKey
         ]);
