@@ -1,6 +1,6 @@
 {
   "name": "@coremod/authentication",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "Express Passport authentication for Coremod Typescript Node.js application.",
   "main": "src/index.ts",
   "scripts": {
@@ -37,8 +37,8 @@
     "uuid": "^8.3.0"
   },
   "devDependencies": {
-    "@coremod/logger": "^0.2.5",
-    "@coremod/typeorm": "^0.2.5",
+    "@coremod/logger": "^0.2.6",
+    "@coremod/typeorm": "^0.2.6",
     "@types/bcrypt": "^3.0.0",
     "@types/express": "^4.17.7",
     "@types/node": "^14.0.27",
@@ -46,7 +46,7 @@
     "bcrypt": "^5.0.0",
     "class-transformer": "^0.3.1",
     "class-validator": "^0.12.2",
-    "coremod": "^0.2.5",
+    "coremod": "^0.2.6",
     "express": "^4.17.1",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
