@@ -13,5 +13,18 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@coremod/authentication": "^0.2.11",
+    "@coremod/express": "^0.2.11",
+    "@coremod/logger": "^0.2.11",
+    "@coremod/public": "^0.2.11",
+    "@coremod/typeorm": "^0.2.11",
+    "coremod": "^0.2.11"
+  },
+  "devDependencies": {
+    "ts-node": "^9.0.0",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.0.2"
+  }
 }
