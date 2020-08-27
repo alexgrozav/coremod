@@ -20,36 +20,10 @@
     "url": "https://github.com/coremod-io/coremod/issues"
   },
   "homepage": "https://github.com/coremod-io/coremod#readme",
-  "peerDependencies": {
-    "dotenv": ">=8.0.0",
-    "ts-node": ">=8.0.0",
-    "tsconfig-paths": ">=3.0.0",
-    "typescript": ">=3.0.0"
-  },
-  "dependencies": {
-    "@types/deepmerge": "^2.2.0",
-    "@types/node": "^14.0.27",
-    "@types/yargs": "^15.0.5",
-    "chalk": "^4.1.0",
-    "deepmerge": "^4.2.2",
-    "figlet": "^1.5.0",
-    "minimist": "^1.2.5",
-    "yargs": "^15.4.1"
-  },
-  "devDependencies": {
-    "dotenv": "^8.2.0",
-    "ts-node": "^8.10.2",
-    "tsconfig-paths": "^3.9.0",
-    "tslint": "^6.1.3",
-    "typescript": "^3.9.7"
-  },
-  "gitHead": "d9e90eb74559c7e73ebaccf5b1c32d94005a7c96",
+  "gitHead": "df7ebdfb12a83876064f14d9f8a1efa43e0fe545",
   "files": [
     "src",
     "dist",
-    "cli",
-    "cli.ts",
-    "index.ts",
     "tsconfig.json",
     "tslint.json",
     "LICENSE",
@@ -57,5 +31,11 @@
   ],
   "bin": {
     "coremod": "./dist/cli.js"
+  },
+  "dependencies": {
+    "deepmerge": "^4.2.2",
+    "dotenv": "^8.2.0",
+    "minimist": "^1.2.5",
+    "yargs": "^15.4.1"
   }
 }
