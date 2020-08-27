@@ -1,4 +1,5 @@
 "use strict";
+var _a, _b;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserService = void 0;
 const tslib_1 = require("tslib");
@@ -46,8 +47,7 @@ UserService = tslib_1.__decorate([
     tslib_1.__param(0, typeorm_typedi_extensions_1.OrmRepository()),
     tslib_1.__param(1, typeorm_1.EventDispatcher()),
     tslib_1.__param(2, logger_1.DLogger(__filename)),
-    tslib_1.__metadata("design:paramtypes", [repositories_1.UserRepository,
-        typeorm_1.EventDispatcherInterface, Object])
+    tslib_1.__metadata("design:paramtypes", [repositories_1.UserRepository, typeof (_a = typeof typeorm_1.EventDispatcherInterface !== "undefined" && typeorm_1.EventDispatcherInterface) === "function" ? _a : Object, typeof (_b = typeof logger_1.LoggerInterface !== "undefined" && logger_1.LoggerInterface) === "function" ? _b : Object])
 ], UserService);
 exports.UserService = UserService;
 //# sourceMappingURL=UserService.js.map
