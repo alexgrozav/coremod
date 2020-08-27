@@ -1,6 +1,6 @@
 {
   "name": "@coremod/logger",
-  "version": "0.2.11",
+  "version": "0.2.13",
   "description": "Winston Logger module for Coremod Typescript Node.js application.",
   "main": "dist/index.js",
   "scripts": {
