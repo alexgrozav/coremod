@@ -21,6 +21,7 @@
     "@coremod/public": "^0.2.15",
     "@coremod/typeorm": "^0.2.15",
     "coremod": "^0.2.15",
+    "reflect-metadata": "^0.1.13",
     "routing-controllers-openapi": "^2.0.1",
     "typeorm-seeding": "^1.6.1"
   },

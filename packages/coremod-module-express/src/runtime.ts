@@ -7,9 +7,6 @@ import {
 import { Application, Request, Response } from 'express';
 import { createExpressServer } from 'routing-controllers';
 import { authorizationChecker, currentUserChecker } from './auth';
-import { useContainer as classValidatorUseContainer } from 'class-validator';
-import { useContainer as routingUseContainer } from 'routing-controllers';
-import { Container } from 'typedi';
 
 export const runtime: CoremodModuleRuntime = (context: CoremodModuleRuntimeContext, configuration: CoremodModuleRuntimeConfiguration, moduleOptions: CoremodModuleOptions) => {
     // console.log(configuration.application.routePrefix);
@@ -56,7 +53,4 @@ export const runtime: CoremodModuleRuntime = (context: CoremodModuleRuntimeConte
     // Here we can set the data for other loaders
     context.application = application;
     context.server = server;
-
-    routingUseContainer(Container);
-    classValidatorUseContainer(Container);
 };

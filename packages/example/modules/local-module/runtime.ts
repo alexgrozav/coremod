@@ -5,6 +5,14 @@ import {
     CoremodModuleOptions
 } from "coremod";
 
+import { useContainer as ormUseContainer } from 'typeorm';
+import { useContainer as classValidatorUseContainer } from 'class-validator';
+import { useContainer as routingUseContainer } from 'routing-controllers';
+
+import { Container } from 'typedi';
+
 export const runtime: CoremodModuleRuntime = (context: CoremodModuleRuntimeContext, configuration: CoremodModuleRuntimeConfiguration, moduleOptions: CoremodModuleOptions) => {
-    console.log(context, configuration, moduleOptions)
+    ormUseContainer(Container);
+    routingUseContainer(Container);
+    classValidatorUseContainer(Container);
 };

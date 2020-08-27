@@ -5,9 +5,9 @@ import {
 } from 'routing-controllers';
 import { OpenAPI, ResponseSchema } from 'routing-controllers-openapi';
 
-import { UserNotFoundError } from '@coremod/authentication/dist/errors';
-import { User } from '@coremod/authentication/dist/models/User';
-import { UserService } from '@coremod/authentication/dist/services/UserService';
+import { UserNotFoundError } from '../errors';
+import { User } from '../models/User';
+import { UserService } from '../services/UserService';
 import { UserRoleResponse } from '@app/controllers/UserRoleController';
 
 class BaseUserBody {

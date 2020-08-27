@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import { Coremod } from 'coremod';
 import { configuration } from '../coremod.config';
 

@@ -5,13 +5,9 @@ import {
     CoremodModuleRuntimeContext
 } from "coremod";
 import { createConnection, getConnectionOptions } from 'typeorm';
-import { useContainer as ormUseContainer } from 'typeorm';
-import { Container } from 'typedi';
 import { sync as glob } from 'glob';
 
 export const runtime: CoremodModuleRuntime = async (context: CoremodModuleRuntimeContext, configuration: CoremodModuleRuntimeConfiguration, moduleOptions: CoremodModuleOptions) => {
-    ormUseContainer(Container);
-
     const loadedConnectionOptions = await getConnectionOptions();
 
     const connectionOptions = Object.assign(loadedConnectionOptions, {

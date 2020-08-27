@@ -13,7 +13,6 @@ const baseConfiguration = {
         'src/database/factories/**/*'
     ],
     subscribers: [
-        "node_modules/@coremod/authentication/src/subscribers/**/*",
         "src/subscribers/**/*"
     ],
     cli: {

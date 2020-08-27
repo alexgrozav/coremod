@@ -1,11 +1,11 @@
 import { CoremodConfiguration } from "coremod";
 
 import { module as LocalModule } from './modules/local-module';
-import { module as LoggerModule } from '@coremod/logger/src';
-import { module as ExpressModule } from '@coremod/express/src';
-import { module as PublicModule } from '@coremod/public/src';
-import { module as TypeORMModule } from '@coremod/typeorm/src';
-import { module as AuthenticationModule } from '@coremod/authentication/src';
+import { module as LoggerModule } from '@coremod/logger';
+import { module as ExpressModule } from '@coremod/express';
+import { module as PublicModule } from '@coremod/public';
+import { module as TypeORMModule } from '@coremod/typeorm';
+import { module as AuthenticationModule } from '@coremod/authentication';
 
 export const configuration: CoremodConfiguration = {
     modules: [

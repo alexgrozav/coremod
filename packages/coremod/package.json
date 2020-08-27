@@ -37,5 +37,6 @@
     "dotenv": "^8.2.0",
     "minimist": "^1.2.5",
     "yargs": "^15.4.1"
-  }
+  },
+  "devDependencies": {}
 }
