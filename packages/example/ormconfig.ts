@@ -3,7 +3,6 @@ import { configuration } from '@coremod/typeorm';
 const baseConfiguration = {
     ...configuration,
     entities: [
-        "node_modules/@coremod/authentication/src/models/**/*",
         "src/models/**/*"
     ],
     migrations: [

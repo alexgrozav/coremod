@@ -2,11 +2,11 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.configuration = void 0;
 const local_module_1 = require("./modules/local-module");
-const logger_1 = require("@coremod/logger");
-const express_1 = require("@coremod/express");
-const public_1 = require("@coremod/public");
-const typeorm_1 = require("@coremod/typeorm");
-const authentication_1 = require("@coremod/authentication");
+const src_1 = require("@coremod/logger/src");
+const src_2 = require("@coremod/express/src");
+const src_3 = require("@coremod/public/src");
+const src_4 = require("@coremod/typeorm/src");
+const src_5 = require("@coremod/authentication/src");
 exports.configuration = {
     modules: [
         [local_module_1.module, {
@@ -15,13 +15,13 @@ exports.configuration = {
                     host: '3031'
                 }
             }],
-        logger_1.module,
-        express_1.module,
-        [public_1.module, {
+        src_1.module,
+        src_2.module,
+        [src_3.module, {
                 favicon: false
             }],
-        typeorm_1.module,
-        [authentication_1.module, {
+        src_4.module,
+        [src_5.module, {
                 configuration: {
                     jwt: {
                         secretOrKey: '##helloworld1234##'

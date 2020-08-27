@@ -6,8 +6,8 @@ const class_validator_1 = require("class-validator");
 const routing_controllers_1 = require("routing-controllers");
 const routing_controllers_openapi_1 = require("routing-controllers-openapi");
 const errors_1 = require("@coremod/authentication/dist/errors");
-const UserRole_1 = require("@coremod/authentication/src/models/UserRole");
-const UserRoleService_1 = require("@coremod/authentication/src/services/UserRoleService");
+const UserRole_1 = require("@coremod/authentication/dist/models/UserRole");
+const UserRoleService_1 = require("@coremod/authentication/dist/services/UserRoleService");
 class BaseUserRoleBody {
 }
 tslib_1.__decorate([

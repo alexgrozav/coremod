@@ -2,8 +2,8 @@ import * as Faker from 'faker';
 import { define } from 'typeorm-seeding';
 import { v4 as uuid } from 'uuid';
 
-import { User } from '@coremod/authentication/src/models/User';
-import { UserProfile } from '@coremod/authentication/src/models/UserProfile';
+import { User } from '@coremod/authentication/dist/models/User';
+import { UserProfile } from '@coremod/authentication/dist/models/UserProfile';
 
 define(UserProfile, (faker: typeof Faker, context: { user: User }) => {
     const bio = faker.random.words(100);
