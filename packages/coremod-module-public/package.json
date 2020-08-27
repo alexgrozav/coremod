@@ -1,6 +1,6 @@
 {
   "name": "@coremod/public",
-  "version": "0.2.15",
+  "version": "0.2.16",
   "description": "Express public folder for Coremod Typescript Node.js application.",
   "main": "src/index.ts",
   "scripts": {
@@ -29,7 +29,7 @@
     "README.md"
   ],
   "devDependencies": {
-    "coremod": "^0.2.15",
+    "coremod": "^0.2.16",
     "express": "^4.17.1"
   },
   "peerDependencies": {

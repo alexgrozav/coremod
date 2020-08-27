@@ -1,6 +1,6 @@
 {
   "name": "coremod",
-  "version": "0.2.15",
+  "version": "0.2.16",
   "description": "Essential Node.js application modules written in Typescript.",
   "main": "src/index.ts",
   "scripts": {
@@ -37,6 +37,5 @@
     "dotenv": "^8.2.0",
     "minimist": "^1.2.5",
     "yargs": "^15.4.1"
-  },
-  "devDependencies": {}
+  }
 }

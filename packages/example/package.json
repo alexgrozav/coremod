@@ -1,6 +1,6 @@
 {
   "name": "@coremod/examples",
-  "version": "0.2.15",
+  "version": "0.2.16",
   "private": true,
   "description": "",
   "main": "src/index.ts",
@@ -15,12 +15,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@coremod/authentication": "^0.2.15",
-    "@coremod/express": "^0.2.15",
-    "@coremod/logger": "^0.2.15",
-    "@coremod/public": "^0.2.15",
-    "@coremod/typeorm": "^0.2.15",
-    "coremod": "^0.2.15",
+    "@coremod/authentication": "^0.2.16",
+    "@coremod/express": "^0.2.16",
+    "@coremod/logger": "^0.2.16",
+    "@coremod/public": "^0.2.16",
+    "@coremod/typeorm": "^0.2.16",
+    "coremod": "^0.2.16",
     "reflect-metadata": "^0.1.13",
     "routing-controllers-openapi": "^2.0.1",
     "typeorm-seeding": "^1.6.1"
