@@ -1,6 +1,6 @@
 {
   "name": "@coremod/express",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "description": "Express module for Coremod Typescript Node.js application.",
   "main": "dist/index.js",
   "scripts": {
@@ -34,7 +34,7 @@
     "typedi": "^0.8.0"
   },
   "devDependencies": {
-    "coremod": "^0.2.9",
+    "coremod": "^0.2.11",
     "express": "^4.17.1"
   },
   "peerDependencies": {
