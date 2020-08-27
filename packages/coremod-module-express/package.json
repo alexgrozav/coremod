@@ -1,6 +1,6 @@
 {
   "name": "@coremod/express",
-  "version": "0.2.13",
+  "version": "0.2.14",
   "description": "Express module for Coremod Typescript Node.js application.",
   "main": "dist/index.js",
   "scripts": {
