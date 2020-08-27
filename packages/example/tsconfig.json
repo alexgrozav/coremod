@@ -43,8 +43,6 @@
         "jsx": "react"
     },
     "include": [
-        "node_modules/coremod/**/*",
-        "node_modules/@coremod/**/*",
         "src/**/*"
     ]
 }

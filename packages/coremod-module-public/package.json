@@ -2,7 +2,7 @@
   "name": "@coremod/public",
   "version": "0.2.6",
   "description": "Express public folder for Coremod Typescript Node.js application.",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc -d",
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,8 +1,8 @@
 {
   "name": "coremod",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "Essential Node.js application modules written in Typescript.",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc -d",
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -9,7 +9,8 @@
     "bootstrap": "lerna exec npm install && lerna link",
     "build": "lerna exec npm run build",
     "prepublish": "npm run build",
-    "clean": "npm run clean:node_modules",
-    "clean:node_modules": "lerna exec 'rm -r node_modules'"
+    "clean": "npm run clean:node_modules && npm run clean:dist",
+    "clean:node_modules": "lerna exec 'rm -r node_modules'",
+    "clean:dist": "lerna exec 'rm -r dist'"
   }
 }

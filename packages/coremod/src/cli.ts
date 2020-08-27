@@ -9,7 +9,7 @@ import minimist = require('minimist');
     const configurationFile = resolve(argv.config || 'coremod.config.ts');
     const { configuration } = require(configurationFile);
     const coremod = new Coremod(configuration);
-    await coremod.initialize();
+    coremod.initialize();
 
     const cli = yargs
         .scriptName("coremod")
