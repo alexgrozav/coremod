@@ -60,7 +60,7 @@
     "uuid": "^8.3.0",
     "winston": "^3.3.3"
   },
-  "gitHead": "55e96bbfd3ed02da8e1dcf81ece7f0fba92e1f7b",
+  "gitHead": "30c6e8d03787a83f1a84e23add4089b59298daba",
   "files": [
     "src",
     "dist",
