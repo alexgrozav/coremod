@@ -27,6 +27,9 @@
     "typescript": ">=3.0.0"
   },
   "dependencies": {
+      "@types/deepmerge": "^2.2.0",
+      "@types/node": "^14.0.27",
+      "@types/yargs": "^15.0.5",
     "chalk": "^4.1.0",
     "deepmerge": "^4.2.2",
     "figlet": "^1.5.0",
@@ -34,16 +37,13 @@
     "yargs": "^15.4.1"
   },
   "devDependencies": {
-    "@types/deepmerge": "^2.2.0",
-    "@types/node": "^14.0.27",
-    "@types/yargs": "^15.0.5",
     "dotenv": "^8.2.0",
     "ts-node": "^8.10.2",
     "tsconfig-paths": "^3.9.0",
     "tslint": "^6.1.3",
     "typescript": "^3.9.7"
   },
-  "gitHead": "30c6e8d03787a83f1a84e23add4089b59298daba",
+  "gitHead": "4c207e3c18dd36f66b8c55060cf498f72da6ca84",
   "files": [
     "src",
     "dist",
