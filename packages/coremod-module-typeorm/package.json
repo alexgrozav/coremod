@@ -1,6 +1,6 @@
 {
   "name": "@coremod/typeorm",
-  "version": "0.2.13",
+  "version": "0.2.15",
   "description": "Express TypeORM integration for Coremod Typescript Node.js application.",
   "main": "src/index.ts",
   "scripts": {
@@ -34,7 +34,7 @@
     "typeorm": "^0.2.25"
   },
   "devDependencies": {
-    "coremod": "^0.2.11"
+    "coremod": "^0.2.15"
   },
   "peerDependencies": {
     "coremod": "^0.2.9"
