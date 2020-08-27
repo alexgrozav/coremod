@@ -1,6 +1,6 @@
 {
   "name": "@coremod/examples",
-  "version": "0.2.11",
+  "version": "0.2.12",
   "private": true,
   "description": "",
   "main": "dist/index.js",
@@ -15,7 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@coremod/authentication": "^0.2.11",
+    "@coremod/authentication": "^0.2.12",
     "@coremod/express": "^0.2.11",
     "@coremod/logger": "^0.2.11",
     "@coremod/public": "^0.2.11",
