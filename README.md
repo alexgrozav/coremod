@@ -50,7 +50,7 @@ npm install -g ts-node coremod
 Next, add Coremod to your project and install all peer dependencies.
 
 ~~~
-npm install -S coremod typeorm typeorm-seeding typedi typeorm-typedi-extensions bcrypt dotenv class-transformer class-validator routing-controllers routing-controllers-openapi event-dispatch express cors faker passport passport-jwt
+npm install -S coremod
 ~~~
 
 ~~~
@@ -60,6 +60,9 @@ coremod --help
 ### Modules
 Install the Official Coremod modules:
 
+~~~
+npm i -S @coremod/ioc
+~~~
 ~~~
 npm i -S @coremod/express
 ~~~
@@ -80,15 +83,25 @@ npm i -S @coremod/authentication
 Create a file called `coremod.config.ts`. The configuration uses the Babel configuration pattern.
 
 ~~~typescript
-import { CoremodConfiguration } from "coremod";
+import { CoremodConfiguration } from 'coremod';
+
+import { module as IOCModule } from '@coremod/ioc';
+import { module as LoggerModule } from '@coremod/logger';
+import { module as ExpressModule } from '@coremod/express';
+import { module as PublicModule } from '@coremod/public';
+import { module as TypeORMModule } from '@coremod/typeorm';
+import { module as AuthenticationModule } from '@coremod/authentication';
 
 export const configuration: CoremodConfiguration = {
     modules: [
-        require.resolve('@coremod/logger'),
-        require.resolve('@coremod/express'),
-        require.resolve('@coremod/public'),
-        require.resolve('@coremod/typeorm'),
-        [require.resolve('@coremod/authentication'), {
+        IOCModule,
+        LoggerModule,
+        ExpressModule,
+        [PublicModule, {
+            favicon: false
+        }],
+        TypeORMModule,
+        [AuthenticationModule, {
             configuration: {
                 jwt: {
                     secretOrKey: '##helloworld1234##'
@@ -112,7 +125,7 @@ import {
     CoremodModuleOptions,
     CoremodModuleRuntimeConfiguration, 
     env
-} from "coremod";
+} from 'coremod';
 
 export const configuration: CoremodModuleRuntimeConfiguration = {
     host: env.get('HOST', 'localhost'),
@@ -127,12 +140,14 @@ export const moduleOptions: CoremodModuleOptions = {
     something: true
 };
 
-export default {
+export const module: CoremodModule = {
     namespace: 'local',
     moduleOptions,
     configuration,
     runtime,
-} as CoremodModule;
+};
+
+export default module;
 ~~~
 
 Modules have the following format:
@@ -145,11 +160,12 @@ Next, add it to your `coremod.config.ts` file:
 
 ~~~typescript
 import { resolve } from 'path';
-import { CoremodConfiguration } from "coremod";
+import { CoremodConfiguration } from 'coremod';
+import { module as LocalModule } from './modules/local-module';
 
 export const configuration: CoremodConfiguration = {
     modules: [
-        [resolve(__dirname, 'modules', 'local-module'), {
+        [LocalModule, {
             something: true,
             configuration: {
                 host: '3031'
@@ -175,5 +191,5 @@ Coremod is maintained under [the Semantic Versioning guidelines](https://semver.
 - <https://github.com/alexgrozav>
 
 ## Copyright and license
-Code copyright 2017-2020 [Coremod Authors](https://github.com/coremod-io/coremod/graphs/contributors).
+Code copyright 2020 [Coremod Authors](https://github.com/coremod-io/coremod/graphs/contributors).
 Code released under the [MIT License](https://github.com/coremod-io/coremod/blob/master/packages/coremod/LICENSE).
