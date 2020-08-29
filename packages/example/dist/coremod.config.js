@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.configuration = void 0;
 const local_module_1 = require("./modules/local-module");
+const ioc_1 = require("@coremod/ioc");
 const logger_1 = require("@coremod/logger");
 const express_1 = require("@coremod/express");
 const public_1 = require("@coremod/public");
@@ -9,6 +10,7 @@ const typeorm_1 = require("@coremod/typeorm");
 const authentication_1 = require("@coremod/authentication");
 exports.configuration = {
     modules: [
+        ioc_1.module,
         [local_module_1.module, {
                 something: true,
                 configuration: {
