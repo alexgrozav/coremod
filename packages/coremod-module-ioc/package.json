@@ -1,0 +1,46 @@
+{
+  "name": "@coremod/ioc",
+  "version": "0.2.16",
+  "description": "Express IOC for Coremod Typescript Node.js application.",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc -d",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coremod-io/coremod.git"
+  },
+  "keywords": [
+    "coremod"
+  ],
+  "author": "Alex Grozav <alex@grozav.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coremod-io/coremod/issues"
+  },
+  "homepage": "https://github.com/coremod-io/coremod#readme",
+  "gitHead": "df7ebdfb12a83876064f14d9f8a1efa43e0fe545",
+  "files": [
+    "src",
+    "dist",
+    "index.ts",
+    "LICENSE",
+    "README.md"
+  ],
+  "devDependencies": {
+    "coremod": "^0.2.16",
+    "express": "^4.17.1"
+  },
+  "peerDependencies": {
+    "coremod": "^0.2.9",
+    "express": "^4.17.1"
+  },
+  "dependencies": {
+    "class-validator": "^0.12.2",
+    "routing-controllers": "^0.9.0-alpha.6",
+    "serve-favicon": "^2.5.0",
+    "typedi": "^0.8.0",
+    "typeorm": "^0.2.25"
+  }
+}

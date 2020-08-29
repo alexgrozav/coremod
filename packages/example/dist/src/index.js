@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+require("reflect-metadata");
 const coremod_1 = require("coremod");
 const coremod_config_1 = require("../coremod.config");
 (async () => {

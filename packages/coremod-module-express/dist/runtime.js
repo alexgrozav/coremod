@@ -3,9 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.runtime = void 0;
 const routing_controllers_1 = require("routing-controllers");
 const auth_1 = require("./auth");
-const class_validator_1 = require("class-validator");
-const routing_controllers_2 = require("routing-controllers");
-const typedi_1 = require("typedi");
 exports.runtime = (context, configuration, moduleOptions) => {
     // console.log(configuration.application.routePrefix);
     /**
@@ -46,7 +43,5 @@ exports.runtime = (context, configuration, moduleOptions) => {
     // Here we can set the data for other loaders
     context.application = application;
     context.server = server;
-    routing_controllers_2.useContainer(typedi_1.Container);
-    class_validator_1.useContainer(typedi_1.Container);
 };
 //# sourceMappingURL=runtime.js.map

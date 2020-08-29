@@ -6,9 +6,9 @@ const class_transformer_1 = require("class-transformer");
 const class_validator_1 = require("class-validator");
 const routing_controllers_1 = require("routing-controllers");
 const routing_controllers_openapi_1 = require("routing-controllers-openapi");
-const errors_1 = require("@coremod/authentication/dist/errors");
-const User_1 = require("@coremod/authentication/dist/models/User");
-const UserService_1 = require("@coremod/authentication/dist/services/UserService");
+const errors_1 = require("../errors");
+const User_1 = require("../models/User");
+const UserService_1 = require("../services/UserService");
 const UserRoleController_1 = require("@app/controllers/UserRoleController");
 class BaseUserBody {
 }

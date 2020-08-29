@@ -21,11 +21,8 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.runtime = void 0;
 const typeorm_1 = require("typeorm");
-const typeorm_2 = require("typeorm");
-const typedi_1 = require("typedi");
 const glob_1 = require("glob");
 exports.runtime = async (context, configuration, moduleOptions) => {
-    typeorm_2.useContainer(typedi_1.Container);
     const loadedConnectionOptions = await typeorm_1.getConnectionOptions();
     const connectionOptions = Object.assign(loadedConnectionOptions, {
         type: configuration.database.type,

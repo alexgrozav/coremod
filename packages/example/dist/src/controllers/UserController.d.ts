@@ -1,5 +1,5 @@
-import { User } from '@coremod/authentication/dist/models/User';
-import { UserService } from '@coremod/authentication/dist/services/UserService';
+import { User } from '../models/User';
+import { UserService } from '../services/UserService';
 import { UserRoleResponse } from '@app/controllers/UserRoleController';
 declare class BaseUserBody {
     firstName: string;
