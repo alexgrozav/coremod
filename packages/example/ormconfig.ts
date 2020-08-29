@@ -6,7 +6,6 @@ const baseConfiguration = {
         "src/models/**/*"
     ],
     migrations: [
-        "node_modules/@coremod/authentication/src/database/migrations/**/*",
         "src/database/migrations/**/*"
     ],
     factories: [

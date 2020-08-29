@@ -17,6 +17,7 @@
   "dependencies": {
     "@coremod/authentication": "^0.2.16",
     "@coremod/express": "^0.2.16",
+    "@coremod/ioc": "^0.2.16",
     "@coremod/logger": "^0.2.16",
     "@coremod/public": "^0.2.16",
     "@coremod/typeorm": "^0.2.16",
