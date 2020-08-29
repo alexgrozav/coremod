@@ -1,6 +1,6 @@
 {
   "name": "@coremod/typeorm",
-  "version": "0.2.17",
+  "version": "0.2.19",
   "description": "Express TypeORM integration for Coremod Typescript Node.js application.",
   "main": "src/index.ts",
   "scripts": {
