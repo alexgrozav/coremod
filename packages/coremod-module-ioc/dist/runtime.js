@@ -1,16 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.runtime = void 0;
-const tslib_1 = require("tslib");
-const express = tslib_1.__importStar(require("express"));
-const serve_favicon_1 = tslib_1.__importDefault(require("serve-favicon"));
-const path_1 = require("path");
+const typeorm_1 = require("typeorm");
+const class_validator_1 = require("class-validator");
+const routing_controllers_1 = require("routing-controllers");
+const typedi_1 = require("typedi");
 exports.runtime = (context, configuration, moduleOptions) => {
-    // Serve static files like images from the public folder
-    context.application.use(express.static(configuration.paths.public, configuration.application.public));
-    // A favicon is a visual cue that client software, like browsers, use to identify a site
-    if (moduleOptions.favicon) {
-        context.application.use(serve_favicon_1.default(path_1.resolve(configuration.paths.public, 'favicon.ico')));
-    }
+    typeorm_1.useContainer(typedi_1.Container);
+    routing_controllers_1.useContainer(typedi_1.Container);
+    class_validator_1.useContainer(typedi_1.Container);
 };
 //# sourceMappingURL=runtime.js.map
