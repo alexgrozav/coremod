@@ -1,6 +1,6 @@
 {
   "name": "@coremod/examples",
-  "version": "0.2.17",
+  "version": "0.2.18",
   "private": true,
   "description": "",
   "main": "src/index.ts",
@@ -15,7 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@coremod/authentication": "^0.2.17",
+    "@coremod/authentication": "^0.2.18",
     "@coremod/express": "^0.2.17",
     "@coremod/ioc": "^0.2.17",
     "@coremod/logger": "^0.2.16",
