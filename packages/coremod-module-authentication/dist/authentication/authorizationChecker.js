@@ -3,9 +3,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.authorizationChecker = void 0;
 const tslib_1 = require("tslib");
 const passport = tslib_1.__importStar(require("passport"));
-function authorizationChecker(repository) {
+function authorizationChecker(model) {
     return (action, roles) => {
-        return passport.authenticate('jwt', (err, user) => {
+        return passport.authenticate('jwt', { session: false }, (err, user) => {
+            console.log(roles, err, user);
             if (err) {
                 return Promise.reject(err);
             }

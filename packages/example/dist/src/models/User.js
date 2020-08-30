@@ -7,8 +7,8 @@ const bcrypt = tslib_1.__importStar(require("bcrypt"));
 const class_transformer_1 = require("class-transformer");
 const class_validator_1 = require("class-validator");
 const typeorm_1 = require("typeorm");
-const UserRole_1 = require("./UserRole");
-const UserProfile_1 = require("./UserProfile");
+const UserRole_1 = require("@app/models/UserRole");
+const UserProfile_1 = require("@app/models/UserProfile");
 // import { UseAsTitle, UseAsSearchField } from '@coremod/admin';
 let User = User_1 = class User {
     static async hashPassword(password) {

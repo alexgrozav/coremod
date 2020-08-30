@@ -1,4 +1,4 @@
-import { User } from './User';
+import { User } from '@app/models/User';
 export declare class UserProfile {
     id: string;
     bio: string;

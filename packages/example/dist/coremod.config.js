@@ -8,7 +8,7 @@ const express_1 = require("@coremod/express");
 const public_1 = require("@coremod/public");
 const typeorm_1 = require("@coremod/typeorm");
 const authentication_1 = require("@coremod/authentication");
-// import { module as AuthenticationModule } from '../coremod-module-authentication/src';
+const User_1 = require("@app/models/User");
 exports.configuration = {
     modules: [
         ioc_1.module,
@@ -19,12 +19,16 @@ exports.configuration = {
                 }
             }],
         logger_1.module,
-        express_1.module,
+        [express_1.module, {
+                authorizationChecker: authentication_1.authorizationChecker(User_1.User),
+                currentUserChecker: authentication_1.currentUserChecker(User_1.User)
+            }],
         [public_1.module, {
                 favicon: false
             }],
         typeorm_1.module,
         [authentication_1.module, {
+                model: User_1.User,
                 configuration: {
                     jwt: {
                         secretOrKey: '##helloworld1234##'

@@ -1,5 +1,5 @@
-import { UserRole } from './UserRole';
-import { UserProfile } from './UserProfile';
+import { UserRole } from '@app/models/UserRole';
+import { UserProfile } from '@app/models/UserProfile';
 export declare class User {
     static hashPassword(password: string): Promise<string>;
     static comparePassword(user: User, password: string): Promise<boolean>;

@@ -2,7 +2,7 @@ import { Connection } from 'typeorm';
 import { Factory, Seeder } from 'typeorm-seeding';
 import { v4 as uuid } from 'uuid';
 
-import { UserRole } from '@coremod/authentication/dist/models/UserRole';
+import { UserRole } from '@app/models/UserRole';
 
 export class CreateUserRoles implements Seeder {
     public async run(factory: Factory, connection: Connection): Promise<void> {

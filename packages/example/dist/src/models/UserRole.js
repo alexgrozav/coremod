@@ -4,7 +4,7 @@ exports.UserRole = void 0;
 const tslib_1 = require("tslib");
 const class_validator_1 = require("class-validator");
 const typeorm_1 = require("typeorm");
-const User_1 = require("./User");
+const User_1 = require("@app/models/User");
 // import { UseAsTitle } from '@coremod/admin';
 const class_transformer_1 = require("class-transformer");
 let UserRole = class UserRole {

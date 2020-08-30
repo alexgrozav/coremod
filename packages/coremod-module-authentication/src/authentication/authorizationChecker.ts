@@ -1,9 +1,11 @@
 import { Action } from 'routing-controllers';
 import * as passport from 'passport';
 
-export function authorizationChecker(repository) {
+export function authorizationChecker(model) {
     return (action: Action, roles: any[]): Promise<boolean> => {
-        return passport.authenticate('jwt', (err, user) => {
+        return passport.authenticate('jwt', { session: false }, (err, user) => {
+            console.log(roles, err, user);
+
             if (err) {
                 return Promise.reject(err);
             }

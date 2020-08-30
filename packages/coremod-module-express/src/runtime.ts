@@ -32,8 +32,8 @@ export const runtime: CoremodModuleRuntime = (context: CoremodModuleRuntimeConte
         /**
          * Authorization features
          */
-        authorizationChecker: configuration.application.authorizationChecker || authorizationChecker,
-        currentUserChecker: configuration.application.currentUserChecker || currentUserChecker,
+        authorizationChecker: moduleOptions.authorizationChecker || authorizationChecker,
+        currentUserChecker: moduleOptions.currentUserChecker || currentUserChecker,
     });
 
     if (moduleOptions.heartbeat) {

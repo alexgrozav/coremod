@@ -5,9 +5,9 @@ import {
 } from 'routing-controllers';
 import { OpenAPI, ResponseSchema } from 'routing-controllers-openapi';
 
-import { UserNotFoundError } from '../errors';
-import { User } from '../models/User';
-import { UserService } from '../services/UserService';
+import { UserNotFoundError } from '@app/errors';
+import { User } from '@app/models/User';
+import { UserService } from '@app/services/UserService';
 import { UserRoleResponse } from '@app/controllers/UserRoleController';
 
 class BaseUserBody {
@@ -47,12 +47,14 @@ export class UserController {
     ) {}
 
     @Get()
+    @Authorized()
     @ResponseSchema(UserResponse, { isArray: true })
     public list(): Promise<User[]> {
         return this.userService.list();
     }
 
     @Get('/me')
+    @OnUndefined(UserNotFoundError)
     @ResponseSchema(UserResponse)
     public me(@Req() req: any): Promise<User[]> {
         return req.user;

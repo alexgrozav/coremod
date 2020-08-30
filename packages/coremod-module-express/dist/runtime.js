@@ -26,8 +26,8 @@ exports.runtime = (context, configuration, moduleOptions) => {
         /**
          * Authorization features
          */
-        authorizationChecker: configuration.application.authorizationChecker || auth_1.authorizationChecker,
-        currentUserChecker: configuration.application.currentUserChecker || auth_1.currentUserChecker,
+        authorizationChecker: moduleOptions.authorizationChecker || auth_1.authorizationChecker,
+        currentUserChecker: moduleOptions.currentUserChecker || auth_1.currentUserChecker,
     });
     if (moduleOptions.heartbeat) {
         application.get(configuration.application.routePrefix, (req, res) => {

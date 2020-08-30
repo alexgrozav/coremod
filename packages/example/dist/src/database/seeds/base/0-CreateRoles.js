@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CreateUserRoles = void 0;
 const uuid_1 = require("uuid");
-const UserRole_1 = require("@coremod/authentication/dist/models/UserRole");
+const UserRole_1 = require("@app/models/UserRole");
 class CreateUserRoles {
     async run(factory, connection) {
         const em = connection.createEntityManager();

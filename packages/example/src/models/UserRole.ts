@@ -13,7 +13,7 @@ import {
     PrimaryColumn,
     UpdateDateColumn
 } from 'typeorm';
-import { User } from './User';
+import { User } from '@app/models/User';
 // import { UseAsTitle } from '@coremod/admin';
 import { Type } from 'class-transformer';
 
