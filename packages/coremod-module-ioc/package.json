@@ -1,6 +1,6 @@
 {
   "name": "@coremod/ioc",
-  "version": "0.2.17",
+  "version": "0.2.21",
   "description": "Express IOC for Coremod Typescript Node.js application.",
   "main": "src/index.ts",
   "scripts": {
@@ -29,7 +29,7 @@
     "README.md"
   ],
   "devDependencies": {
-    "coremod": "^0.2.16",
+    "coremod": "^0.2.21",
     "express": "^4.17.1"
   },
   "peerDependencies": {
