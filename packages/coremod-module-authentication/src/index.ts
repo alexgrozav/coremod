@@ -11,7 +11,7 @@ export * from './repositories';
 export * from './services';
 export * from './subscribers';
 export * from './errors';
-export * from './auth';
+export * from './authentication';
 
 export const module: CoremodModule = {
     namespace: 'authentication',

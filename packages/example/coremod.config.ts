@@ -7,6 +7,7 @@ import { module as ExpressModule } from '@coremod/express';
 import { module as PublicModule } from '@coremod/public';
 import { module as TypeORMModule } from '@coremod/typeorm';
 import { module as AuthenticationModule } from '@coremod/authentication';
+// import { module as AuthenticationModule } from '../coremod-module-authentication/src';
 
 export const configuration: CoremodConfiguration = {
     modules: [

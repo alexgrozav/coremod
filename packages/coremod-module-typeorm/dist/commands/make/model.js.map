@@ -1,0 +1,1 @@
+{"version":3,"file":"model.js","sourceRoot":"","sources":["../../../src/commands/make/model.ts"],"names":[],"mappings":";;;AAAA,sDAAiD;AAE1C,KAAK,UAAU,KAAK,CAAC,IAAI;IAC5B,MAAM,eAAK,CAAC,SAAS,EAAE;QACnB,IAAI,EAAE,yBAAyB;QAC/B,UAAU,EAAE,8BAA8B;QAC1C,6BAA6B;QAC7B,eAAe;QACf,IAAI,EAAE,IAAI,CAAC,IAAI;KAClB,EAAE,EAAE,CAAC,CAAC;AACX,CAAC;AARD,sBAQC"}

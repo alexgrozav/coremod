@@ -7,6 +7,7 @@ import {
 import { Application, Request, Response } from 'express';
 import { createExpressServer } from 'routing-controllers';
 import { authorizationChecker, currentUserChecker } from './auth';
+import bodyParser from 'body-parser';
 
 export const runtime: CoremodModuleRuntime = (context: CoremodModuleRuntimeContext, configuration: CoremodModuleRuntimeConfiguration, moduleOptions: CoremodModuleOptions) => {
     // console.log(configuration.application.routePrefix);
@@ -44,6 +45,9 @@ export const runtime: CoremodModuleRuntime = (context: CoremodModuleRuntimeConte
             });
         });
     }
+
+    application.use(bodyParser.urlencoded({ extended: true }));
+    application.use(bodyParser.json());
 
     // Start express server
     const server = application.listen(configuration.application.port, configuration.application.host, () => {
