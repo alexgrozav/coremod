@@ -1,6 +1,6 @@
 {
   "name": "@coremod/logger",
-  "version": "0.2.21",
+  "version": "0.2.22",
   "description": "Winston Logger module for Coremod Typescript Node.js application.",
   "main": "src/index.ts",
   "scripts": {
@@ -32,7 +32,7 @@
     "coremod": "^0.2.9"
   },
   "devDependencies": {
-    "coremod": "^0.2.21"
+    "coremod": "^0.2.22"
   },
   "dependencies": {
     "typedi": "^0.8.0",
