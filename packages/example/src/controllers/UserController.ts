@@ -47,7 +47,7 @@ export class UserController {
     ) {}
 
     @Get()
-    @Authorized()
+    @Authorized('admin')
     @ResponseSchema(UserResponse, { isArray: true })
     public list(): Promise<User[]> {
         return this.userService.list();

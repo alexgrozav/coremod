@@ -5,7 +5,7 @@ import {
     CoremodModuleRuntimeContext
 } from 'coremod';
 import express from 'express';
-import passport from 'passport';
+import passport from './authentication/passport';
 import jwt from 'jsonwebtoken';
 import { localStrategy, jwtStrategy } from "./authentication/strategies";
 
