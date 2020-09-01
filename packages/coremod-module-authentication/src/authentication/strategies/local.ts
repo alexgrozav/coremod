@@ -1,12 +1,14 @@
 import { CoremodModuleRuntimeContext, CoremodModuleRuntimeConfiguration, CoremodModuleOptions } from 'coremod';
 import { Strategy } from 'passport-local';
+import { getRepository, Repository } from "typeorm";
 
 export const localStrategy = (context: CoremodModuleRuntimeContext, configuration: CoremodModuleRuntimeConfiguration, moduleOptions: CoremodModuleOptions) => {
     return new Strategy({
         usernameField : 'email',
         passwordField : 'password'
     }, async (email, password, done) => {
-        const user: any = await moduleOptions.repository.findOne({ email });
+        const repository: Repository<typeof moduleOptions.model> = getRepository(moduleOptions.model);
+        const user: any = await repository.findOne({ email });
 
         // Check if user with given email exists
         if (!user) {

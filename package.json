@@ -6,7 +6,9 @@
   },
   "scripts": {
     "postinstall": "npm run bootstrap",
-    "bootstrap": "lerna exec npm install && lerna link",
+    "install": "lerna exec npm install",
+    "link": "lerna link",
+    "bootstrap": "npm run install && npm run link",
     "build": "lerna exec npm run build",
     "prepublish": "npm run build",
     "sync": "npm run clean && npm run bootstrap",
