@@ -37,6 +37,6 @@
     "coremod": "^0.3.0"
   },
   "peerDependencies": {
-    "coremod": "^0.2.9"
+    "coremod": "^0.3.0"
   }
 }
