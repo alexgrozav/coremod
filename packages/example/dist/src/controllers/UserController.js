@@ -83,7 +83,7 @@ let UserController = class UserController {
 };
 tslib_1.__decorate([
     routing_controllers_1.Get(),
-    routing_controllers_1.Authorized(),
+    routing_controllers_1.Authorized('admin'),
     routing_controllers_openapi_1.ResponseSchema(UserResponse, { isArray: true }),
     tslib_1.__metadata("design:type", Function),
     tslib_1.__metadata("design:paramtypes", []),

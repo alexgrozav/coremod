@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.runtime = void 0;
 const tslib_1 = require("tslib");
 const express_1 = tslib_1.__importDefault(require("express"));
-const passport_1 = tslib_1.__importDefault(require("passport"));
+const passport_1 = tslib_1.__importDefault(require("./authentication/passport"));
 const jsonwebtoken_1 = tslib_1.__importDefault(require("jsonwebtoken"));
 const strategies_1 = require("./authentication/strategies");
 exports.runtime = (context, configuration, moduleOptions) => {
