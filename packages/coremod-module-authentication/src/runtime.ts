@@ -8,6 +8,7 @@ import express from 'express';
 import passport from './authentication/passport';
 import jwt from 'jsonwebtoken';
 import { localStrategy, jwtStrategy } from "./authentication/strategies";
+import { configureSwagger } from "./authentication/swagger";
 
 export const runtime: CoremodModuleRuntime = (context: CoremodModuleRuntimeContext, configuration: CoremodModuleRuntimeConfiguration, moduleOptions: CoremodModuleOptions) => {
     const router = express.Router();
@@ -16,7 +17,7 @@ export const runtime: CoremodModuleRuntime = (context: CoremodModuleRuntimeConte
         passport.use('signin', localStrategy(context, configuration, moduleOptions));
         passport.use(jwtStrategy(context, configuration, moduleOptions));
 
-        router.post('/signin', async (req, res, next) => {
+        router.post('/signin', async (req: any, res: any, next: any) => {
             passport.authenticate('signin', async (err, user, info) => {
                 if (err || !user){
                     const error = new Error('An Error occurred');

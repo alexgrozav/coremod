@@ -1,0 +1,1 @@
+{"version":3,"file":"UserRoleNotFoundError.js","sourceRoot":"","sources":["../../src/errors/UserRoleNotFoundError.ts"],"names":[],"mappings":";;;AAAA,6DAAgD;AAEhD,MAAa,qBAAsB,SAAQ,+BAAS;IAChD;QACI,KAAK,CAAC,GAAG,EAAE,sBAAsB,CAAC,CAAC;IACvC,CAAC;CACJ;AAJD,sDAIC"}
