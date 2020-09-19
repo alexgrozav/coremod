@@ -45,6 +45,8 @@ export const runtime: CoremodModuleRuntime = (context: CoremodModuleRuntimeConte
                 });
             })(req, res, next);
         }, passport.authenticate('jwt', { session: false }));
+
+        configureSwagger(context);
     }
 
     context.application.use(passport.initialize());

@@ -20,6 +20,7 @@
     "@coremod/ioc": "^0.3.1",
     "@coremod/logger": "^0.3.1",
     "@coremod/public": "^0.3.1",
+    "@coremod/swagger": "^0.3.1",
     "@coremod/typeorm": "^0.3.1",
     "coremod": "^0.3.0",
     "jsonwebtoken": "^8.5.1",

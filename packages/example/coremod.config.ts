@@ -6,6 +6,7 @@ import { module as LoggerModule } from '@coremod/logger';
 import { module as ExpressModule } from '@coremod/express';
 import { module as PublicModule } from '@coremod/public';
 import { module as TypeORMModule } from '@coremod/typeorm';
+import { module as SwaggerModule } from '@coremod/swagger';
 import { module as AuthenticationModule, currentUserChecker, authorizationChecker } from '@coremod/authentication';
 import { User } from "@app/models/User";
 
@@ -34,6 +35,7 @@ export const configuration: CoremodConfiguration = {
                     secretOrKey: '##helloworld1234##'
                 }
             }
-        }]
+        }],
+        SwaggerModule
     ]
 };

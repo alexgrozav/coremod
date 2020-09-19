@@ -10,6 +10,7 @@ import basicAuth from 'express-basic-auth';
 import { getMetadataArgsStorage } from 'routing-controllers';
 import { routingControllersToSpec } from 'routing-controllers-openapi';
 import * as swaggerUi from 'swagger-ui-express';
+import deepmerge from 'deepmerge';
 
 export const runtime: CoremodModuleRuntime = (context: CoremodModuleRuntimeContext, configuration: CoremodModuleRuntimeConfiguration, moduleOptions: CoremodModuleOptions) => {
     const schemas = validationMetadatasToSchemas({
@@ -17,7 +18,7 @@ export const runtime: CoremodModuleRuntime = (context: CoremodModuleRuntimeConte
         refPointerPrefix: '#/components/schemas/',
     } as any);
 
-    const swaggerFile = routingControllersToSpec(getMetadataArgsStorage(), {}, {
+    let swaggerFile = routingControllersToSpec(getMetadataArgsStorage(), {}, {
         components: {
             schemas,
             securitySchemes: {
@@ -28,6 +29,9 @@ export const runtime: CoremodModuleRuntime = (context: CoremodModuleRuntimeConte
             },
         },
     });
+
+    // Add context paths and schemas
+    swaggerFile = deepmerge(context.swagger || {}, swaggerFile);
 
     // Add npm infos to the swagger doc
     swaggerFile.info = {
