@@ -1,6 +1,6 @@
 {
   "name": "@coremod/authentication",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Express Passport authentication for Coremod Typescript Node.js application.",
   "main": "src/index.ts",
   "scripts": {
@@ -28,8 +28,8 @@
     "README.md"
   ],
   "devDependencies": {
-    "@coremod/logger": "^0.3.1",
-    "@coremod/typeorm": "^0.3.1",
+    "@coremod/logger": "^0.3.2",
+    "@coremod/typeorm": "^0.3.2",
     "coremod": "^0.3.0",
     "express": "^4.17.1"
   },
